@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://hjx4sl6smwjx"]
+
+[ext_resource type="Script" uid="uid://dwrtiqako8t5d" path="res://assets/scripts/world.gd" id="1_0moxn"]
+[ext_resource type="Texture2D" uid="uid://bmepvf8xbhj6k" path="res://assets/images/ground.png" id="1_betll"]
+[ext_resource type="PackedScene" uid="uid://bt801uo2fx0la" path="res://assets/scenes/chatacter.tscn" id="2_ypxwc"]
+[ext_resource type="PackedScene" uid="uid://dj0enc663c0by" path="res://assets/scenes/esc_settings.tscn" id="3_gc7y0"]
+[ext_resource type="PackedScene" uid="uid://cpyy0fpqfs4fx" path="res://assets/scenes/camera.tscn" id="5_vu0c7"]
+[ext_resource type="Shader" uid="uid://gfbvw4toyrsv" path="res://assets/scripts/world-boundry.gdshader" id="6_bd1kc"]
+[ext_resource type="Texture2D" uid="uid://dumaauyjj0ah1" path="res://assets/images/boundry.png" id="7_6trao"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ypxwc"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_gc7y0"]
+sky_material = SubResource("ProceduralSkyMaterial_ypxwc")
+
+[sub_resource type="Environment" id="Environment_0moxn"]
+background_mode = 2
+sky = SubResource("Sky_gc7y0")
+tonemap_mode = 2
+glow_intensity = 0.0
+fog_light_color = Color(0.7792604, 0.72992694, 0.55012476, 1)
+fog_density = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.25
+volumetric_fog_albedo = Color(1, 1, 0.85882354, 1)
+volumetric_fog_gi_inject = 0.0
+volumetric_fog_anisotropy = 0.0
+volumetric_fog_detail_spread = 0.5
+
+[sub_resource type="Compositor" id="Compositor_0moxn"]
+compositor_effects = Array[CompositorEffect]([null])
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vu0c7"]
+size = Vector2(100, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd1kc"]
+albedo_texture = ExtResource("1_betll")
+uv1_triplanar = true
+texture_filter = 2
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ypxwc"]
+data = PackedVector3Array(50, 0, 50, -50, 0, 50, 50, 0, -50, -50, 0, 50, -50, 0, -50, 50, 0, -50)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6trao"]
+size = Vector2(40, 40)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6trao"]
+render_priority = 0
+shader = ExtResource("6_bd1kc")
+shader_parameter/albedo = ExtResource("7_6trao")
+shader_parameter/uv_scale = Vector2(100, 100)
+shader_parameter/sphere_size = 2.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6trao"]
+size = Vector3(45, 1, 45)
+
+[node name="World" type="Node3D" unique_id=251520294]
+script = ExtResource("1_0moxn")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1482060772]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_energy = 1.4
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=620438666]
+environment = SubResource("Environment_0moxn")
+compositor = SubResource("Compositor_0moxn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2016130851]
+mesh = SubResource("PlaneMesh_vu0c7")
+surface_material_override/0 = SubResource("StandardMaterial3D_bd1kc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=457362047]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=907735492]
+shape = SubResource("ConcavePolygonShape3D_ypxwc")
+
+[node name="Character" parent="." unique_id=1097701852 instance=ExtResource("2_ypxwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9386177, 0)
+
+[node name="Settings" parent="." unique_id=661904845 instance=ExtResource("3_gc7y0")]
+
+[node name="Camera" parent="." unique_id=289153504 instance=ExtResource("5_vu0c7")]
+
+[node name="SpringArm3D" parent="Camera" index="0" unique_id=61196993]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, 0.5632503, 0)
+
+[node name="Boundry" type="MeshInstance3D" parent="." unique_id=1268379653]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 20, 20)
+mesh = SubResource("PlaneMesh_6trao")
+surface_material_override/0 = SubResource("ShaderMaterial_6trao")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Boundry" unique_id=506038887]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/StaticBody3D" unique_id=1795096664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_6trao")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Boundry2" type="MeshInstance3D" parent="." unique_id=256362389]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 20, -20)
+mesh = SubResource("PlaneMesh_6trao")
+surface_material_override/0 = SubResource("ShaderMaterial_6trao")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Boundry2" unique_id=1421833327]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry2/StaticBody3D" unique_id=896725154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_6trao")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Boundry3" type="MeshInstance3D" parent="." unique_id=1863057083]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 20, 20, 0)
+mesh = SubResource("PlaneMesh_6trao")
+surface_material_override/0 = SubResource("ShaderMaterial_6trao")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Boundry3" unique_id=1044973959]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry3/StaticBody3D" unique_id=1829596688]
+transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_6trao")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Boundry4" type="MeshInstance3D" parent="." unique_id=245963339]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -20, 20, 0)
+mesh = SubResource("PlaneMesh_6trao")
+surface_material_override/0 = SubResource("ShaderMaterial_6trao")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Boundry4" unique_id=560989983]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry4/StaticBody3D" unique_id=916692340]
+transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_6trao")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[connection signal="mouse_capture" from="." to="Settings/Buttons" method="_on_world_mouse_capture"]
+[connection signal="mouse_visible" from="." to="Settings/Buttons" method="_on_world_mouse_visible"]
+
+[editable path="Character"]
+[editable path="Settings"]
+[editable path="Camera"]

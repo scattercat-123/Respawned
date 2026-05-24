@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://cfdtq2rpm7d3v"]
+
+[ext_resource type="FontFile" uid="uid://80na557qr1u3" path="res://assets/fonts/KiyomoriDemo-BLvqx.ttf" id="1_4ujj4"]
+
+[resource]
+default_font = ExtResource("1_4ujj4")
+Label/fonts/font = ExtResource("1_4ujj4")

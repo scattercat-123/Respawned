@@ -1,0 +1,14 @@
+CollisionShape3D
+MeshInstance3D
+Label
+HSlider
+Control
+CollisionShape2D
+Node2D
+Area2D
+CanvasLayer
+Sprite3D
+SubViewport
+Node
+SubViewportContainer
+AudioStreamPlayer

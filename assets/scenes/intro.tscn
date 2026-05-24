@@ -1,0 +1,231 @@
+[gd_scene format=3 uid="uid://bf4rjhit53hbj"]
+
+[ext_resource type="Texture2D" uid="uid://bneu0i7ummrwa" path="res://assets/images/pfpMeoth.png" id="1_5dkqn"]
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_jow2t"]
+[ext_resource type="Theme" uid="uid://c53jh7bg0djiu" path="res://assets/fonts/heading.tres" id="3_26f8n"]
+[ext_resource type="FontFile" uid="uid://c6k0x810ou3mq" path="res://assets/fonts/Recoleta-RegularDEMO.otf" id="4_diudh"]
+[ext_resource type="Theme" uid="uid://b0fanp1jrm2w" path="res://assets/fonts/para.tres" id="5_lbqsn"]
+
+[sub_resource type="Animation" id="Animation_r7vr3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG Overlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PfpMeoth:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Godot logo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("godot credit:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("scat studios:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_u8qfl"]
+resource_name = "intro"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG Overlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PfpMeoth:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Godot logo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("godot credit:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("scat studios:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ugdp1"]
+_data = {
+&"RESET": SubResource("Animation_r7vr3"),
+&"intro": SubResource("Animation_u8qfl")
+}
+
+[node name="Intro" type="Node2D" unique_id=1267765838]
+
+[node name="BG" type="ColorRect" parent="." unique_id=1758403785]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="PfpMeoth" type="Sprite2D" parent="." unique_id=1933791140]
+position = Vector2(960, 496)
+scale = Vector2(2, 2)
+texture = ExtResource("1_5dkqn")
+
+[node name="Godot logo" type="Sprite2D" parent="." unique_id=865491386]
+position = Vector2(101, 87)
+texture = ExtResource("2_jow2t")
+
+[node name="scat studios" type="Label" parent="." unique_id=1186593863]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 560.0
+offset_top = 800.0
+offset_right = 1360.0
+offset_bottom = 960.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_26f8n")
+text = "Scat Studios"
+
+[node name="godot credit" type="Label" parent="." unique_id=1414980715]
+offset_left = 190.0
+offset_top = 57.0
+offset_right = 706.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("4_diudh")
+theme_override_font_sizes/font_size = 50
+text = "Made with godot"
+
+[node name="Label" type="Label" parent="." unique_id=1682009148]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 160.0
+offset_top = 100.0
+offset_right = 1760.0
+offset_bottom = 1000.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_lbqsn")
+text = "This game is a work of fiction created for entertainment purposes only. All combat, characters, actions, and scenarios shown are purely virtual and must not be imitated in real life. Players should take regular breaks, avoid prolonged screen time, and stop playing if they feel any discomfort. By playing, you acknowledge that you understand this is fictional content and accept full responsibility for your gameplay."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BG Overlay" type="ColorRect" parent="." unique_id=104638751]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=39100104]
+libraries/ = SubResource("AnimationLibrary_ugdp1")

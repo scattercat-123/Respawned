@@ -1,0 +1,311 @@
+[gd_scene format=3 uid="uid://dj0enc663c0by"]
+
+[ext_resource type="Script" uid="uid://c7g3ai24l5d5n" path="res://assets/scripts/settings_menu.gd" id="1_6861h"]
+[ext_resource type="Texture2D" uid="uid://dkbykuxp8pqpn" path="res://assets/images/return-to-menu-1.png" id="2_eqp86"]
+[ext_resource type="Texture2D" uid="uid://4f325ek13ye2" path="res://assets/images/return-to-menu-2.png" id="3_31y0k"]
+[ext_resource type="AudioStream" uid="uid://ccybxfcdnwsgr" path="res://assets/sounds/click.wav" id="4_eqp86"]
+[ext_resource type="Texture2D" uid="uid://be1tg1pgajf7m" path="res://assets/images/settings-2.png" id="4_r0ylg"]
+[ext_resource type="Texture2D" uid="uid://cvc5j7wvg54x7" path="res://assets/images/settings-1.png" id="5_5gw76"]
+[ext_resource type="Texture2D" uid="uid://bapc6bsdn5cg6" path="res://assets/images/back.png" id="7_5gw76"]
+[ext_resource type="FontFile" uid="uid://c6k0x810ou3mq" path="res://assets/fonts/Recoleta-RegularDEMO.otf" id="8_hm71h"]
+[ext_resource type="Script" uid="uid://crhxfwitt81er" path="res://assets/scripts/fov_slider.gd" id="8_wqpvw"]
+
+[sub_resource type="Animation" id="Animation_5gw76"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Buttons:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2000, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1080)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Buttons/ReturnToMenu1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-306, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.34901962)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Control:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Buttons/Settings2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hm71h"]
+resource_name = "Settings Open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Buttons/ReturnToMenu1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Back:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-306, 0), Vector2(-19, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.34901962), Color(0, 0, 0, 0.56078434)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Control:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Buttons/Settings2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r0ylg"]
+resource_name = "in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Buttons:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.75, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2000, 0), Vector2(2000, 0), Vector2(30, 0), Vector2(50, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1080), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5gw76"]
+_data = {
+&"RESET": SubResource("Animation_5gw76"),
+&"Settings Open": SubResource("Animation_hm71h"),
+&"in": SubResource("Animation_r0ylg")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31y0k"]
+size = Vector2(409, 144)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hm71h"]
+radius = 100.0
+
+[node name="Settings" type="CanvasLayer" unique_id=661904845]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1111879299]
+libraries/ = SubResource("AnimationLibrary_5gw76")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1114485877]
+offset_top = -1080.0
+offset_right = 1920.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.34901962)
+
+[node name="Buttons" type="Control" parent="." unique_id=1850938465]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 2000.0
+offset_right = 2000.0
+mouse_filter = 2
+script = ExtResource("1_6861h")
+
+[node name="ReturnToMenu1" type="Sprite2D" parent="Buttons" unique_id=1845795539]
+position = Vector2(207, 247)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_eqp86")
+
+[node name="ReturnToMenu2" type="Sprite2D" parent="Buttons" unique_id=1530473021]
+visible = false
+position = Vector2(207, 252)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_31y0k")
+
+[node name="Return to Menu" type="Area2D" parent="Buttons" unique_id=1007243789]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Return to Menu" unique_id=1262389943]
+position = Vector2(212, 239)
+shape = SubResource("RectangleShape2D_31y0k")
+
+[node name="Settings1" type="Sprite2D" parent="Buttons" unique_id=544530703]
+position = Vector2(207, 434)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_r0ylg")
+
+[node name="Settings2" type="Sprite2D" parent="Buttons" unique_id=996005065]
+visible = false
+position = Vector2(207, 440)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_5gw76")
+
+[node name="Click" type="AudioStreamPlayer" parent="Buttons" unique_id=961038518]
+stream = ExtResource("4_eqp86")
+pitch_scale = 0.6
+max_polyphony = 6
+
+[node name="Settings" type="Area2D" parent="Buttons" unique_id=1168159198]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Settings" unique_id=1171439946]
+position = Vector2(211, 430)
+shape = SubResource("RectangleShape2D_31y0k")
+
+[node name="Back" type="Node2D" parent="." unique_id=1523483406]
+position = Vector2(-306, 0)
+
+[node name="Back" type="Sprite2D" parent="Back" unique_id=1764355668]
+position = Vector2(148, 128)
+texture = ExtResource("7_5gw76")
+
+[node name="BackButton" type="Area2D" parent="Back" unique_id=1235333442]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Back/BackButton" unique_id=1609301837]
+position = Vector2(148, 128)
+shape = SubResource("CircleShape2D_hm71h")
+
+[node name="Control" type="Control" parent="." unique_id=545828133]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="FOV-Slider" type="HSlider" parent="Control" unique_id=1585021514]
+texture_filter = 2
+layout_mode = 0
+offset_left = 663.0
+offset_top = 320.0
+offset_right = 963.0
+offset_bottom = 350.0
+scale = Vector2(2.5, 2.5)
+min_value = 60.0
+max_value = 90.0
+value = 75.0
+script = ExtResource("8_wqpvw")
+
+[node name="Label" type="Label" parent="Control/FOV-Slider" unique_id=1301434276]
+texture_filter = 1
+layout_mode = 0
+offset_left = -83.600006
+offset_top = -10.4
+offset_right = 33.399994
+offset_bottom = 72.6
+theme_override_fonts/font = ExtResource("8_hm71h")
+theme_override_font_sizes/font_size = 40
+text = "FOV"
+
+[connection signal="mouse_entered" from="Buttons/Return to Menu" to="Buttons" method="_on_return_to_menu_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Return to Menu" to="Buttons" method="_on_return_to_menu_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Settings" to="Buttons" method="_on_settings_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Settings" to="Buttons" method="_on_settings_mouse_exited"]
+[connection signal="mouse_entered" from="Back/BackButton" to="Buttons" method="_on_back_button_mouse_entered"]
+[connection signal="mouse_exited" from="Back/BackButton" to="Buttons" method="_on_back_button_mouse_exited"]

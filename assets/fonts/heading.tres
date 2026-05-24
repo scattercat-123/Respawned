@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://c53jh7bg0djiu"]
+
+[ext_resource type="FontFile" uid="uid://3j22hkpuyqc7" path="res://assets/fonts/Super Starfish.ttf" id="1_o3ago"]
+
+[resource]
+default_font = ExtResource("1_o3ago")
+default_font_size = 150
