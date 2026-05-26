@@ -1,12 +1,14 @@
 extends Node3D
 
+@onready var character: CharacterBody3D = $Character
+
 signal mouse_visible
 signal mouse_capture
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-func _process(_delta: float) -> void:
+func _process(_delta):
 	pass
 
 func _unhandled_input(event: InputEvent) -> void:

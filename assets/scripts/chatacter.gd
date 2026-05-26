@@ -5,6 +5,7 @@ extends CharacterBody3D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var floating_text: CanvasLayer = $"Floating text"
 @onready var debug_label: Label = $Debug/Label
+@onready var running: AudioStreamPlayer3D = $sounds/running
 
 const FLOATING_TXT = preload("uid://cfdtq2rpm7d3v")
 
@@ -63,6 +64,7 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	movement()
+	sounds()
 	
 	if Input.is_action_just_pressed("c") and (animation_player.current_animation != "combat-punch-idle1" and animation_player.current_animation != "combat-punch-idle2"):
 		combat_mode = true
@@ -154,35 +156,60 @@ func _process(delta: float) -> void:
 			text_msg("combat return type:Alpha", Color(0.252, 0.252, 0.252, 1.0), 60, 3)
 		else:
 			text_msg("combat return type:Beta", Color(0.248, 0.248, 0.248, 1.0), 60, 3)
-			
-func movement():
-	if Input.is_action_pressed("w") and Input.is_action_pressed("a") and combat_mode == false:
-		play_anim("combat-run-front")
-		player_speed = 3
-		turning_angle=45
-	elif Input.is_action_pressed("w") and Input.is_action_pressed("d") and combat_mode == false:
-		play_anim("combat-run-front")
-		player_speed = 3
-		turning_angle = -45
-	elif Input.is_action_pressed("w") and combat_mode == false:
-		play_anim("combat-run-front")
-		turning_angle = 0
-		player_speed = 3
-	elif Input.is_action_pressed("a") and combat_mode == false:
-		turning_angle = 0
-		player_speed = 2
-		play_anim("combat-strafe-left")
-	elif Input.is_action_pressed("d") and combat_mode == false:
-		turning_angle = 0
-		player_speed = 2
-		play_anim("combat-strafe-right")
-	elif Input.is_action_pressed("s") and combat_mode == false:
-		turning_angle = 0
-		play_anim("combat-run-back")
-		player_speed = 2
+
+func sounds():
+	var move_speed = Vector2(velocity.x, velocity.z).length()
+	var target_db : float
+	if move_speed > 0.1:
+		if !running.playing:
+			running.play()
+		running.pitch_scale = move_speed / 3.5
+		if Input.is_action_pressed("w"):
+			target_db = -18
+		else:
+			target_db = -22
+		running.volume_db = lerpf(running.volume_db, target_db, 0.05)
 	else:
-		if combat_mode == false and attacking==false and is_jumping == false:
-			play_anim("combat-idle")
+		running.volume_db = lerpf(running.volume_db, -80, 0.1)
+	
+
+func movement():
+	if combat_mode == false and is_jumping == false:
+		if Input.is_action_pressed("w") and Input.is_action_pressed("a"):
+			play_anim("combat-run-front")
+			player_speed = 3
+			turning_angle=45
+		elif Input.is_action_pressed("w") and Input.is_action_pressed("d"):
+			play_anim("combat-run-front")
+			player_speed = 3
+			turning_angle = -45
+		elif Input.is_action_pressed("s") and Input.is_action_pressed("a"):
+			play_anim("combat-strafe-left")
+			player_speed = 2
+			turning_angle = 20
+		elif Input.is_action_pressed("s") and Input.is_action_pressed("d"):
+			play_anim("combat-strafe-right")
+			player_speed = 2
+			turning_angle = -20
+		elif Input.is_action_pressed("w"):
+			play_anim("combat-run-front")
+			turning_angle = 0
+			player_speed = 3
+		elif Input.is_action_pressed("a"):
+			turning_angle = 0
+			player_speed = 2
+			play_anim("combat-strafe-left")
+		elif Input.is_action_pressed("d"):
+			turning_angle = 0
+			player_speed = 2
+			play_anim("combat-strafe-right")
+		elif Input.is_action_pressed("s"):
+			turning_angle = 0
+			play_anim("combat-run-back")
+			player_speed = 2
+		else:
+			if attacking==false:
+				play_anim("combat-idle")
 			
 func text_msg(txt : String, color : Color, size : int, speed : float):
 	var label = Label.new()

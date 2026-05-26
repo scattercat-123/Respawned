@@ -87,50 +87,52 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9386177, 0)
 [node name="SpringArm3D" parent="Camera" index="0" unique_id=61196993]
 transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, 0.5632503, 0)
 
-[node name="Boundry" type="MeshInstance3D" parent="." unique_id=1268379653]
+[node name="Boundry" type="Node3D" parent="." unique_id=1665940047]
+
+[node name="Boundry" type="MeshInstance3D" parent="Boundry" unique_id=1268379653]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 20, 20)
 mesh = SubResource("PlaneMesh_6trao")
 surface_material_override/0 = SubResource("ShaderMaterial_6trao")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Boundry" unique_id=506038887]
+[node name="StaticBody3D" type="StaticBody3D" parent="Boundry/Boundry" unique_id=506038887]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/StaticBody3D" unique_id=1795096664]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/Boundry/StaticBody3D" unique_id=1795096664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_6trao")
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
-[node name="Boundry2" type="MeshInstance3D" parent="." unique_id=256362389]
+[node name="Boundry2" type="MeshInstance3D" parent="Boundry" unique_id=256362389]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 20, -20)
 mesh = SubResource("PlaneMesh_6trao")
 surface_material_override/0 = SubResource("ShaderMaterial_6trao")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Boundry2" unique_id=1421833327]
+[node name="StaticBody3D" type="StaticBody3D" parent="Boundry/Boundry2" unique_id=1421833327]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry2/StaticBody3D" unique_id=896725154]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/Boundry2/StaticBody3D" unique_id=896725154]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_6trao")
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
-[node name="Boundry3" type="MeshInstance3D" parent="." unique_id=1863057083]
+[node name="Boundry3" type="MeshInstance3D" parent="Boundry" unique_id=1863057083]
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, 20, 20, 0)
 mesh = SubResource("PlaneMesh_6trao")
 surface_material_override/0 = SubResource("ShaderMaterial_6trao")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Boundry3" unique_id=1044973959]
+[node name="StaticBody3D" type="StaticBody3D" parent="Boundry/Boundry3" unique_id=1044973959]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry3/StaticBody3D" unique_id=1829596688]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/Boundry3/StaticBody3D" unique_id=1829596688]
 transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_6trao")
 debug_color = Color(0, 0.6, 0.69803923, 1)
 
-[node name="Boundry4" type="MeshInstance3D" parent="." unique_id=245963339]
+[node name="Boundry4" type="MeshInstance3D" parent="Boundry" unique_id=245963339]
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -20, 20, 0)
 mesh = SubResource("PlaneMesh_6trao")
 surface_material_override/0 = SubResource("ShaderMaterial_6trao")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Boundry4" unique_id=560989983]
+[node name="StaticBody3D" type="StaticBody3D" parent="Boundry/Boundry4" unique_id=560989983]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry4/StaticBody3D" unique_id=916692340]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Boundry/Boundry4/StaticBody3D" unique_id=916692340]
 transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_6trao")
 debug_color = Color(0, 0.6, 0.69803923, 1)

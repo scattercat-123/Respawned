@@ -1,2 +1,4 @@
-res://assets/scenes/world.tscn
+res://assets/scenes/chatacter.tscn
 res://assets/scripts/world-boundry.gdshader
+res://assets/scripts/world.gd
+res://assets/scripts/chatacter.gd
