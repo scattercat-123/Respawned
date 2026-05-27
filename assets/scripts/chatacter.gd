@@ -29,11 +29,13 @@ func _physics_process(delta: float) -> void:
 	RenderingServer.global_shader_parameter_set("player_pos", position)
 	camera.fov = Global.FOV
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and !is_jumping:
+		sounds("jump")
 		velocity.y = jump_force
 		is_jumping = true
 		animation_player.play("combat-jump")
 		animation_player.seek(0.85)
 		await get_tree().create_timer(0.6).timeout
+		sounds("land")
 		is_jumping = false
 		debug_label.text="landed"
 		current_anim = ""
@@ -41,7 +43,6 @@ func _physics_process(delta: float) -> void:
 	$"../Camera".global_position = lerp($"../Camera".global_position, global_position, 0.5)
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
 
 	input_dir = Input.get_vector("d", "a", "s", "w")
 	mesh.rotation.y = lerp_angle(
@@ -64,7 +65,7 @@ func _physics_process(delta: float) -> void:
 
 func _process(delta: float) -> void:
 	movement()
-	sounds()
+	sounds("process")
 	
 	if Input.is_action_just_pressed("c") and (animation_player.current_animation != "combat-punch-idle1" and animation_player.current_animation != "combat-punch-idle2"):
 		combat_mode = true
@@ -157,20 +158,27 @@ func _process(delta: float) -> void:
 		else:
 			text_msg("combat return type:Beta", Color(0.248, 0.248, 0.248, 1.0), 60, 3)
 
-func sounds():
+func sounds(sound : String):
 	var move_speed = Vector2(velocity.x, velocity.z).length()
-	var target_db : float
-	if move_speed > 0.1:
-		if !running.playing:
-			running.play()
-		running.pitch_scale = move_speed / 3.5
-		if Input.is_action_pressed("w"):
-			target_db = -18
+	if sound == "jump":
+		var rand = randi_range(1, 4)
+		get_node("sounds/jump"+str(rand)).play()
+	if sound == "land":
+		var rand = randi_range(1, 4)
+		get_node("sounds/land"+str(rand)).play()
+	if sound == "process":
+		if move_speed > 0.1 and is_on_floor():
+			var target_db : float
+			if !running.playing:
+				running.play()
+			running.pitch_scale = move_speed / 3.5
+			if Input.is_action_pressed("w"):
+				target_db = -15
+			else:
+				target_db = -19
+			running.volume_db = lerpf(running.volume_db, target_db, 0.05)
 		else:
-			target_db = -22
-		running.volume_db = lerpf(running.volume_db, target_db, 0.05)
-	else:
-		running.volume_db = lerpf(running.volume_db, -80, 0.1)
+			running.volume_db = lerpf(running.volume_db, -80, 0.1)
 	
 
 func movement():

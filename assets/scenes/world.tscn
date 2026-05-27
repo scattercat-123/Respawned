@@ -56,6 +56,42 @@ shader_parameter/sphere_size = 2.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_6trao"]
 size = Vector3(45, 1, 45)
 
+[sub_resource type="Animation" id="Animation_6trao"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("transition_in_out:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mwrnc"]
+resource_name = "in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("transition_in_out:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j6xc2"]
+_data = {
+&"RESET": SubResource("Animation_6trao"),
+&"in": SubResource("Animation_mwrnc")
+}
+
 [node name="World" type="Node3D" unique_id=251520294]
 script = ExtResource("1_0moxn")
 
@@ -78,7 +114,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_bd1kc")
 shape = SubResource("ConcavePolygonShape3D_ypxwc")
 
 [node name="Character" parent="." unique_id=1097701852 instance=ExtResource("2_ypxwc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9386177, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7528547, 0)
 
 [node name="Settings" parent="." unique_id=661904845 instance=ExtResource("3_gc7y0")]
 
@@ -86,6 +122,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9386177, 0)
 
 [node name="SpringArm3D" parent="Camera" index="0" unique_id=61196993]
 transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, 0, 0.5632503, 0)
+
+[node name="Camera3D" parent="Camera/SpringArm3D" index="0" unique_id=1025877580]
+current = false
 
 [node name="Boundry" type="Node3D" parent="." unique_id=1665940047]
 
@@ -136,6 +175,24 @@ surface_material_override/0 = SubResource("ShaderMaterial_6trao")
 transform = Transform3D(1, 0, 0, 0, 1, 8.351872e-23, 0, 8.351872e-23, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_6trao")
 debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="intro_camera_pivot" type="Node3D" parent="." unique_id=100660933]
+
+[node name="Intro Camera" type="Camera3D" parent="intro_camera_pivot" unique_id=2025317591]
+transform = Transform3D(1, 0, 0, 0, 0.90261537, 0.4304481, 0, -0.4304481, 0.90261537, 0, 1.4406993, 1.0264896)
+current = true
+
+[node name="Overlay" type="CanvasLayer" parent="." unique_id=578841758]
+visible = false
+
+[node name="transition_in_out" type="ColorRect" parent="Overlay" unique_id=2009078554]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Overlay" unique_id=1135309725]
+libraries/ = SubResource("AnimationLibrary_j6xc2")
 
 [connection signal="mouse_capture" from="." to="Settings/Buttons" method="_on_world_mouse_capture"]
 [connection signal="mouse_visible" from="." to="Settings/Buttons" method="_on_world_mouse_visible"]

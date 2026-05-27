@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779796623
+::res://::1779894031
 icon.svg::CompressedTexture2D::1790880795757653::1779006472::1779006481::1::::<><><>0<>0<>1d558fff71561543e2cf7e0d300c3350<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1779006018::0::1::::<><><>0<>0<><>::
 ::res://addons/::1779364090
@@ -19,10 +19,11 @@ KiyomoriDemo-BLvqx.ttf::FontFile::2368632228333177780::1779384095::1779384115::1
 para.tres::Theme::122102579623008244::1779010161::0::1::::<><><>0<>0<><>::
 Recoleta-RegularDEMO.otf::FontFile::6970900070375660728::1778001027::1779008651::1::::<><><>0<>0<>26d390e0564c49634b8a8c0cb4cd81f4<>res://.godot/imported/Recoleta-RegularDEMO.otf-be33bc070017e03e5a70859b7c5a0c6f.fontdata::
 Super Starfish.ttf::FontFile::1985554980712286596::1777999814::1779008688::1::::<><><>0<>0<>19ef8b6c820215383d54f93e39dabd3e<>res://.godot/imported/Super Starfish.ttf-e04f8f7468cae6a14793efacd74b277b.fontdata::
-::res://assets/images/::1779556025
+::res://assets/images/::1779902105
 back.png::CompressedTexture2D::2417563224085272339::1779541552::1779541556::1::::<><><>0<>0<>990281010c17e5fb88e9bc2dee1d0a1f<>res://.godot/imported/back.png-ad3079d43f17cbd56680f81ab45368a2.ctex::
 boundry.png::CompressedTexture2D::8587812544852905728::1779555976::1779556025::1::::<><><>0<>0<>131bfc5ea9c15f3d79a32e52d0dd1c89<>res://.godot/imported/boundry.png-ee37819b35a72440226e9e0c4d341ac0.s3tc.ctex::
 ground.png::CompressedTexture2D::3237892889571162676::1779012440::1779012463::1::::<><><>0<>0<>6c32cb3ec634f0b4ab7ad3dfb689d3b6<>res://.godot/imported/ground.png-a10a452afa2dab242aacf15617dc4109.s3tc.ctex::
+music_symbol_sprite_sheet.png::CompressedTexture2D::1288045131385213912::1779902085::1779902105::1::::<><><>0<>0<>6f095762d509272db0261b877fb4dc97<>res://.godot/imported/music_symbol_sprite_sheet.png-305673bc97f97dbe27f6244fb727e5bf.ctex::
 pfpMeoth.png::CompressedTexture2D::3308392617252491856::1772640532::1779008380::1::::<><><>0<>0<>63178a4b46a3ef6727b9835e3fd9cf4f<>res://.godot/imported/pfpMeoth.png-591eab20581109fd204be21695d82389.ctex::
 return-to-menu-1.png::CompressedTexture2D::7864691017702874355::1779277859::1779277890::1::::<><><>0<>0<>68c0e4786ca0dc7b5f794ef661dee768<>res://.godot/imported/return-to-menu-1.png-9d46e4f4e9a3469f82d416da1ff0d98c.ctex::
 return-to-menu-2.png::CompressedTexture2D::2047548228876080579::1779277903::1779277934::1::::<><><>0<>0<>3694cc6cc5b3769e93027e8bf4f6a701<>res://.godot/imported/return-to-menu-2.png-6cdbe65643b81cf3605ad09ccd3ba93f.ctex::
@@ -30,20 +31,35 @@ settings-1.png::CompressedTexture2D::6252775136917416850::1779280324::1779280367
 settings-2.png::CompressedTexture2D::2722015606528920104::1779280333::1779280367::1::::<><><>0<>0<>91c5d35cdbd383de142be0896dc536ec<>res://.godot/imported/settings-2.png-b65f4eb3f69200af114a21ba43afa00c.ctex::
 ::res://assets/models/::1779544186
 combat.gltf::PackedScene::5593426597996777632::1779461513::1779464000::1::::<><><>0<>0<>dd2b3879c51de209d5ccc1605b967146<>res://.godot/imported/combat.gltf-111958dd02829a7d46645fe83534f64c.scn::
-::res://assets/scenes/::1779805871
+::res://assets/scenes/::1779901266
 camera.tscn::PackedScene::5876721227251346645::1779542153::0::1::::<><><>0<>0<><>::
-chatacter.tscn::PackedScene::3789698607489013954::1779805871::0::1::::<><><>0<>0<><>::uid://bdkx2ghc3tivm::::res://assets/scripts/chatacter.gd<>uid://r7m3vy0358gt::::res://assets/sounds/running.mp3
+chatacter.tscn::PackedScene::3789698607489013954::1779813287::0::1::::<><><>0<>0<><>::uid://bdkx2ghc3tivm::::res://assets/scripts/chatacter.gd<>uid://c75sjlbuq5fo4::::res://assets/sounds/running.mp3<>uid://bwonghdsp4gkj::::res://assets/sounds/jump1.mp3<>uid://csk4hfpngkrlk::::res://assets/sounds/jump2.mp3<>uid://cgirt7xyb5gpi::::res://assets/sounds/jump3.mp3<>uid://dmdhicdf1ja65::::res://assets/sounds/jump4.mp3<>uid://dwo6lj4xn2gel::::res://assets/sounds/land1.mp3<>uid://dtck42xaps1a0::::res://assets/sounds/land2.mp3<>uid://cu1xvqejj45h::::res://assets/sounds/land3.mp3<>uid://cxmjciqsxogty::::res://assets/sounds/land4.mp3
 esc_settings.tscn::PackedScene::7842837325346578830::1779543658::0::1::::<><><>0<>0<><>::uid://c7g3ai24l5d5n::::res://assets/scripts/settings_menu.gd<>uid://dkbykuxp8pqpn::::res://assets/images/return-to-menu-1.png<>uid://4f325ek13ye2::::res://assets/images/return-to-menu-2.png<>uid://ccybxfcdnwsgr::::res://assets/sounds/click.wav<>uid://be1tg1pgajf7m::::res://assets/images/settings-2.png<>uid://cvc5j7wvg54x7::::res://assets/images/settings-1.png<>uid://bapc6bsdn5cg6::::res://assets/images/back.png<>uid://c6k0x810ou3mq::::res://assets/fonts/Recoleta-RegularDEMO.otf<>uid://crhxfwitt81er::::res://assets/scripts/fov_slider.gd
-intro.tscn::PackedScene::2798280498699528551::1779012261::0::1::::<><><>0<>0<><>::uid://bneu0i7ummrwa::::res://assets/images/pfpMeoth.png<>uid://4q335xxs2p::::res://icon.svg<>uid://c53jh7bg0djiu::::res://assets/fonts/heading.tres<>uid://c6k0x810ou3mq::::res://assets/fonts/Recoleta-RegularDEMO.otf<>uid://b0fanp1jrm2w::::res://assets/fonts/para.tres
-world.tscn::PackedScene::511350547955836097::1779731095::0::1::::<><><>0<>0<><>::uid://dwrtiqako8t5d::::res://assets/scripts/world.gd<>uid://bmepvf8xbhj6k::::res://assets/images/ground.png<>uid://bt801uo2fx0la::::res://assets/scenes/chatacter.tscn<>uid://dj0enc663c0by::::res://assets/scenes/esc_settings.tscn<>uid://cpyy0fpqfs4fx::::res://assets/scenes/camera.tscn<>uid://gfbvw4toyrsv::::res://assets/scripts/world-boundry.gdshader<>uid://dumaauyjj0ah1::::res://assets/images/boundry.png
-::res://assets/scripts/::1779806476
-chatacter.gd::GDScript::2619076025499633614::1779806476::0::1::::<>CharacterBody3D<><>0<>0<><>::
+intro.tscn::PackedScene::2798280498699528551::1779901266::0::1::::<><><>0<>0<><>::uid://bneu0i7ummrwa::::res://assets/images/pfpMeoth.png<>uid://ddi1b4x7lf3od::::res://assets/scripts/intro.gd<>uid://4q335xxs2p::::res://icon.svg<>uid://c53jh7bg0djiu::::res://assets/fonts/heading.tres<>uid://c6k0x810ou3mq::::res://assets/fonts/Recoleta-RegularDEMO.otf<>uid://b0fanp1jrm2w::::res://assets/fonts/para.tres<>uid://80na557qr1u3::::res://assets/fonts/KiyomoriDemo-BLvqx.ttf<>uid://hjx4sl6smwjx::::res://assets/scenes/world.tscn<>uid://cif7ll73bj58d::::res://assets/sounds/shine.mp3<>uid://dmro5fjie1bq5::::res://assets/sounds/bass_drop.mp3<>uid://bb54lr8vwl036::::res://assets/sounds/01. Gwyn, Lord of Cinder.mp3<>uid://dxtgcv8s2gcxt::::res://assets/sounds/Brentin Davis - Combat Fire.mp3<>uid://3j22hkpuyqc7::::res://assets/fonts/Super Starfish.ttf
+world.tscn::PackedScene::511350547955836097::1779895525::0::1::::<><><>0<>0<><>::uid://dwrtiqako8t5d::::res://assets/scripts/world.gd<>uid://bmepvf8xbhj6k::::res://assets/images/ground.png<>uid://bt801uo2fx0la::::res://assets/scenes/chatacter.tscn<>uid://dj0enc663c0by::::res://assets/scenes/esc_settings.tscn<>uid://cpyy0fpqfs4fx::::res://assets/scenes/camera.tscn<>uid://gfbvw4toyrsv::::res://assets/scripts/world-boundry.gdshader<>uid://dumaauyjj0ah1::::res://assets/images/boundry.png
+::res://assets/scripts/::1779902476
+chatacter.gd::GDScript::2619076025499633614::1779813288::0::1::::<>CharacterBody3D<><>0<>0<><>::
 fov_slider.gd::GDScript::5981908942076453401::1779542283::0::1::::<>HSlider<><>0<>0<><>::
-Global.gd::GDScript::3105954191782423772::1779557677::0::1::::<>Node<><>0<>0<><>::
+Global.gd::GDScript::3105954191782423772::1779814219::0::1::::<>Node<><>0<>0<><>::
+intro.gd::GDScript::7387925591808229863::1779902476::0::1::::<>Node2D<><>0<>0<><>::
 settings_menu.gd::GDScript::7032971169355089045::1779543659::0::1::::<>Control<><>0<>0<><>::
-world-boundry.gdshader::Shader::431554370459239037::1779805050::0::1::::<><><>0<>0<><>::
-world.gd::GDScript::8739679782996819059::1779805188::0::1::::<>Node3D<><>0<>0<><>::
-::res://assets/sounds/::1779806566
+world-boundry.gdshader::Shader::431554370459239037::1779895258::0::1::::<><><>0<>0<><>::
+world.gd::GDScript::8739679782996819059::1779896464::0::1::::<>Node3D<><>0<>0<><>::
+::res://assets/sounds/::1779902533
+01. Gwyn, Lord of Cinder.mp3::AudioStreamMP3::2520322241335611731::1779897969::1779898306::1::::<><><>0<>0<>5572299240d2716a95b904c2f2fed645<>res://.godot/imported/01. Gwyn, Lord of Cinder.mp3-b0dac1cf2812e60dfe8fd79278e351e9.mp3str::
+06. Encounter.mp3::AudioStreamMP3::8540953946204007269::1779902510::1779902535::1::::<><><>0<>0<>4571581b8384e69777b552a69f713af9<>res://.godot/imported/06. Encounter.mp3-2320b78686a37df73e3d7371df9e06c0.mp3str::
+bass_drop.mp3::AudioStreamMP3::8037526485160428178::1779896061::1779896104::1::::<><><>0<>0<>306b783c9a4d4db4eb5cf13665081a18<>res://.godot/imported/bass_drop.mp3-3ae1823e0fc846e10eee5ec470bbbf65.mp3str::
+Brentin Davis - Combat Fire.mp3::AudioStreamMP3::8813197660448648713::1779897265::1779897462::1::::<><><>0<>0<>f42ec56fc01af58308fa27c41eaf85d4<>res://.godot/imported/Brentin Davis - Combat Fire.mp3-d00fbebb8c0c1ee443404cabefd07f35.mp3str::
 buzzing.mp3::AudioStreamMP3::4681324730234131462::1779626362::1779631775::1::::<><><>0<>0<>48a6970a094478b7d84568d8f3a902f8<>res://.godot/imported/buzzing.mp3-57af8b77d4a6bc342d5640a285a12b27.mp3str::
 click.wav::AudioStreamWAV::4962866176873204485::1779280152::1779280168::1::::<><><>0<>0<>6f902014e8df62cfa04022db4811d77d<>res://.godot/imported/click.wav-6af01c357158287f6c248cf59f42edea.sample::
+Dorian Concept - 'Hide (CS01 Version)' (Official Video) - Dorian Concept.mp3::AudioStreamMP3::7192192104146055618::1779902387::1779902409::1::::<><><>0<>0<>7f35f85885bf553197e2487e04d49a94<>res://.godot/imported/Dorian Concept - 'Hide (CS01 Version)' (Official Video) - Dorian Concept.mp3-24e1a129e2b2729fcb5a2070fcf8a146.mp3str::
+jump1.mp3::AudioStreamMP3::3960276941092937805::1779811511::1779811733::1::::<><><>0<>0<>212f7667288029b3a70fe300889d2df5<>res://.godot/imported/jump1.mp3-d1b0ec88d54cfbfa8aaa349dc3568261.mp3str::
+jump2.mp3::AudioStreamMP3::6058657910146853076::1779811564::1779811734::1::::<><><>0<>0<>36834ad8901cd492cd15aa908feaf269<>res://.godot/imported/jump2.mp3-29ece0b52763b0be05932e68afbeeb51.mp3str::
+jump3.mp3::AudioStreamMP3::5211557287578776798::1779811624::1779811734::1::::<><><>0<>0<>dfd1e78d80b9e170640cc46fdaf56741<>res://.godot/imported/jump3.mp3-d8d1707e12a8e1a741dc135c4a8a0762.mp3str::
+jump4.mp3::AudioStreamMP3::8008160723241865732::1779811691::1779811734::1::::<><><>0<>0<>4369354acb9d66b46b9dbe9f8edd2169<>res://.godot/imported/jump4.mp3-65b00001ac66267e8940a091f2a0684f.mp3str::
+land1.mp3::AudioStreamMP3::8734220288754501491::1779811542::1779811734::1::::<><><>0<>0<>9560723db9d6d62cc1fe6cf8c01db8b3<>res://.godot/imported/land1.mp3-d95b0622bd51f58e362196a914d4fc70.mp3str::
+land2.mp3::AudioStreamMP3::8497639247342682689::1779811586::1779811734::1::::<><><>0<>0<>3b56594cc89633e182c8a6ea3d224e33<>res://.godot/imported/land2.mp3-4dec12c8990b97f1061c2d1ea6f9dd00.mp3str::
+land3.mp3::AudioStreamMP3::183286085330381647::1779811649::1779811734::1::::<><><>0<>0<>9c071ee4ff4ff4ddce534d8d4ebd54ba<>res://.godot/imported/land3.mp3-23d842f15699147b9e471c71babde371.mp3str::
+land4.mp3::AudioStreamMP3::6412507774385175254::1779811717::1779811734::1::::<><><>0<>0<>bc1e90e57d47c40663a5521e0391819e<>res://.godot/imported/land4.mp3-33dee533ebd3ff5254222eaccc2cad92.mp3str::
 running.mp3::AudioStreamMP3::7081925254672903357::1779806523::1779806580::1::::<><><>0<>0<>71c0a3f9dffb46b24eaf37727317465a<>res://.godot/imported/running.mp3-cddc718c711f335556efd5762af184ea.mp3str::
+shine.mp3::AudioStreamMP3::5346637221226751413::1779895716::1779895745::1::::<><><>0<>0<>4e7fd89335bb81c1e5192ba1eea27a40<>res://.godot/imported/shine.mp3-fec18ba69c637ad6ee1e91b9ccfd5da4.mp3str::

@@ -1,10 +1,32 @@
 [gd_scene format=3 uid="uid://bf4rjhit53hbj"]
 
 [ext_resource type="Texture2D" uid="uid://bneu0i7ummrwa" path="res://assets/images/pfpMeoth.png" id="1_5dkqn"]
+[ext_resource type="Script" uid="uid://ddi1b4x7lf3od" path="res://assets/scripts/intro.gd" id="1_diudh"]
 [ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="2_jow2t"]
 [ext_resource type="Theme" uid="uid://c53jh7bg0djiu" path="res://assets/fonts/heading.tres" id="3_26f8n"]
 [ext_resource type="FontFile" uid="uid://c6k0x810ou3mq" path="res://assets/fonts/Recoleta-RegularDEMO.otf" id="4_diudh"]
 [ext_resource type="Theme" uid="uid://b0fanp1jrm2w" path="res://assets/fonts/para.tres" id="5_lbqsn"]
+[ext_resource type="FontFile" uid="uid://80na557qr1u3" path="res://assets/fonts/KiyomoriDemo-BLvqx.ttf" id="6_26f8n"]
+[ext_resource type="PackedScene" uid="uid://hjx4sl6smwjx" path="res://assets/scenes/world.tscn" id="7_diudh"]
+[ext_resource type="AudioStream" uid="uid://cif7ll73bj58d" path="res://assets/sounds/shine.mp3" id="9_lbqsn"]
+[ext_resource type="AudioStream" uid="uid://dmro5fjie1bq5" path="res://assets/sounds/bass_drop.mp3" id="10_r7vr3"]
+[ext_resource type="AudioStream" uid="uid://bb54lr8vwl036" path="res://assets/sounds/01. Gwyn, Lord of Cinder.mp3" id="11_ugdp1"]
+[ext_resource type="AudioStream" uid="uid://dxtgcv8s2gcxt" path="res://assets/sounds/Brentin Davis - Combat Fire.mp3" id="12_7w37e"]
+[ext_resource type="FontFile" uid="uid://3j22hkpuyqc7" path="res://assets/fonts/Super Starfish.ttf" id="13_7w37e"]
+[ext_resource type="AudioStream" uid="uid://dap7maiyiw0mw" path="res://assets/sounds/Dorian Concept - 'Hide (CS01 Version)' (Official Video) - Dorian Concept.mp3" id="13_ofc8p"]
+[ext_resource type="AudioStream" uid="uid://dtxki71kj8k0t" path="res://assets/sounds/06. Encounter.mp3" id="14_hsjvd"]
+[ext_resource type="Texture2D" uid="uid://sl66d5gyhqey" path="res://assets/images/music_symbol_sprite_sheet.png" id="14_olpgl"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lbqsn"]
+viewport_path = NodePath("World")
+
+[sub_resource type="Theme" id="Theme_r7vr3"]
+default_font = ExtResource("6_26f8n")
+default_font_size = 175
+Label/fonts/font = ExtResource("6_26f8n")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w37e"]
+size = Vector2(781.2866, 207.94504)
 
 [sub_resource type="Animation" id="Animation_r7vr3"]
 length = 0.001
@@ -80,10 +102,122 @@ tracks/5/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BG:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Menu:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-311, 1100)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Menu:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.22116828]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Menu/Bar:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.6800002, 1.8400002)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Menu:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("play_overlay:color")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Music_Label:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(37, 1093)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Sprite2D2:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-60.999992, 1028)]
+}
+
+[sub_resource type="Animation" id="Animation_lbqsn"]
+resource_name = "bobbing"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(100, 629.99994), Vector2(100, 650)]
+}
 
 [sub_resource type="Animation" id="Animation_u8qfl"]
 resource_name = "intro"
-length = 10.0
+length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -91,10 +225,10 @@ tracks/0/path = NodePath("BG Overlay:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3, 4, 5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1.5, 3, 4, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0.40392157)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -151,23 +285,288 @@ tracks/5/path = NodePath("Label:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 3),
+"times": PackedFloat32Array(0, 3, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BG:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false, true]
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Menu:position")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(5.5, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-311, 1100), Vector2(100, 629.99994)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Menu:rotation")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(5.5, 6.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.22116828, -0.19948232]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Menu/Bar:scale")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(5.5, 6, 6.8, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.6800002, 1.8400002), Vector2(0.6800002, 1.8400002), Vector2(0.6800002, 4.209962), Vector2(0.6800002, 3.7861886)]
+}
+
+[sub_resource type="Animation" id="Animation_olpgl"]
+resource_name = "new_music"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Music_Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(37, 1093), Vector2(91.435, 1012.19)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-60.999992, 1028), Vector2(38.999992, 1034)]
+}
+
+[sub_resource type="Animation" id="Animation_ugdp1"]
+resource_name = "play"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(10, 10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("play_overlay:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ugdp1"]
 _data = {
 &"RESET": SubResource("Animation_r7vr3"),
-&"intro": SubResource("Animation_u8qfl")
+&"bobbing": SubResource("Animation_lbqsn"),
+&"intro": SubResource("Animation_u8qfl"),
+&"new_music": SubResource("Animation_olpgl"),
+&"play": SubResource("Animation_ugdp1")
 }
 
+[sub_resource type="Theme" id="Theme_qlaeq"]
+default_font = ExtResource("13_7w37e")
+default_font_size = 50
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlaeq"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofc8p"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsjvd"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa7nw"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxwv0"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(2048, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn7wc"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vhxg"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg7t5"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(1024, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2qdt"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(1536, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v62u"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(2048, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkjda"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(0, 1024, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etpeo"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(512, 1024, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cff5j"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(1024, 1024, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph8xh"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(1536, 1024, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi0e1"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(2048, 1024, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayeog"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(0, 1536, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0futd"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(512, 1536, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np5of"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(1024, 1536, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7rnj"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(1536, 1536, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sw2np"]
+atlas = ExtResource("14_olpgl")
+region = Rect2(2048, 1536, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nx552"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlaeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofc8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsjvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa7nw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxwv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn7wc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vhxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg7t5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2qdt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v62u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkjda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etpeo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cff5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph8xh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi0e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayeog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0futd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_np5of")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7rnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sw2np")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
 [node name="Intro" type="Node2D" unique_id=1267765838]
+script = ExtResource("1_diudh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1392378016]
+position = Vector2(1374, 449)
+scale = Vector2(1.5, 1.5)
+texture = SubResource("ViewportTexture_lbqsn")
 
 [node name="BG" type="ColorRect" parent="." unique_id=1758403785]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="PfpMeoth" type="Sprite2D" parent="." unique_id=1933791140]
@@ -225,7 +624,97 @@ autowrap_mode = 3
 [node name="BG Overlay" type="ColorRect" parent="." unique_id=104638751]
 offset_right = 1920.0
 offset_bottom = 1080.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=39100104]
+[node name="Menu" type="Node2D" parent="." unique_id=1576185072]
+position = Vector2(-311, 1100)
+rotation = 0.22116828
+
+[node name="Play Game" type="Label" parent="Menu" unique_id=1341562824]
+offset_right = 708.0
+offset_bottom = 176.0
+theme = SubResource("Theme_r7vr3")
+text = "Play Game"
+
+[node name="Play_Area" type="Area2D" parent="Menu/Play Game" unique_id=1859118329]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Menu/Play Game/Play_Area" unique_id=1406074078]
+position = Vector2(329.88348, 86.58746)
+shape = SubResource("RectangleShape2D_7w37e")
+
+[node name="Bar" type="ColorRect" parent="Menu" unique_id=1288671192]
+offset_left = -46.0
+offset_top = 10.0
+offset_right = -6.0
+offset_bottom = 50.0
+scale = Vector2(0.6800002, 1.8400002)
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu" unique_id=39100104]
+root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_ugdp1")
+autoplay = &"intro"
+
+[node name="World" type="SubViewport" parent="." unique_id=728503286]
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="World" parent="World" unique_id=251520294 instance=ExtResource("7_diudh")]
+
+[node name="play_overlay" type="ColorRect" parent="." unique_id=343635482]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="shine" type="AudioStreamPlayer" parent="." unique_id=1688352179]
+stream = ExtResource("9_lbqsn")
+
+[node name="bass_drop" type="AudioStreamPlayer" parent="." unique_id=240413116]
+stream = ExtResource("10_r7vr3")
+
+[node name="Timer" type="Timer" parent="." unique_id=599526285]
+wait_time = 2.0
+
+[node name="Gwyn, Lord of Cinder" type="AudioStreamPlayer" parent="." unique_id=1834598891]
+stream = ExtResource("11_ugdp1")
+
+[node name="Brentin Davis - Combat Fire" type="AudioStreamPlayer" parent="." unique_id=890084681]
+stream = ExtResource("12_7w37e")
+
+[node name="Dorian Concept - Hide CS01" type="AudioStreamPlayer" parent="." unique_id=326111921]
+stream = ExtResource("13_ofc8p")
+
+[node name="Encounter" type="AudioStreamPlayer" parent="." unique_id=1485600636]
+stream = ExtResource("14_hsjvd")
+
+[node name="Music_Label" type="Label" parent="." unique_id=89532261]
+offset_left = 37.0
+offset_top = 1093.0
+offset_right = 219.0
+offset_bottom = 1171.9998
+theme = SubResource("Theme_qlaeq")
+text = "Music"
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="." unique_id=160536936]
+position = Vector2(-60.999992, 1028)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_nx552")
+autoplay = "default"
+frame_progress = 0.1833242
+
+[connection signal="mouse_entered" from="Menu/Play Game/Play_Area" to="." method="_on_play_area_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/Play Game/Play_Area" to="." method="_on_play_area_mouse_exited"]
+[connection signal="animation_finished" from="Menu/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="finished" from="Gwyn, Lord of Cinder" to="." method="_on_gwyn_lord_of_cinder_finished"]
+[connection signal="finished" from="Brentin Davis - Combat Fire" to="." method="_on_brentin_davis__combat_fire_finished"]
+[connection signal="finished" from="Dorian Concept - Hide CS01" to="." method="_on_dorian_concept__hide_cs_01_finished"]
+[connection signal="finished" from="Encounter" to="." method="_on_encounter_finished"]
+
+[editable path="World/World"]
+[editable path="World/World/Character"]
+[editable path="World/World/Settings"]
+[editable path="World/World/Camera"]

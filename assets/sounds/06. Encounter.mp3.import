@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtxki71kj8k0t"
+path="res://.godot/imported/06. Encounter.mp3-2320b78686a37df73e3d7371df9e06c0.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/06. Encounter.mp3"
+dest_files=["res://.godot/imported/06. Encounter.mp3-2320b78686a37df73e3d7371df9e06c0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
