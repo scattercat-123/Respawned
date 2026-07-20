@@ -1,6 +1,8 @@
 # Respawned
 A combat roguelike game in godot
 
+Itch link : [https://scattercat-123.itch.io/respawned](https://scattercat-123.itch.io/respawned)
+
 Download the executable in game_files or check the releases and run it!
 WORK IN PPROGRESS!!
 
