@@ -26,6 +26,9 @@ directories/dch_directory={
 "man": "res://assets/dialogic/man.dch"
 }
 directories/dtl_directory={
+"1_pressed": "res://assets/dialogic/timeline/1_pressed.dtl",
+"2_pressed": "res://assets/dialogic/timeline/2_pressed.dtl",
+"c_pressed": "res://assets/dialogic/timeline/c_pressed.dtl",
 "cannot_find_10th_orb": "res://assets/dialogic/timeline/cannot_find_10th_orb.dtl",
 "orb_1": "res://assets/dialogic/timeline/orb_1.dtl",
 "orb_2": "res://assets/dialogic/timeline/orb_2.dtl",
@@ -34,6 +37,7 @@ directories/dtl_directory={
 "orb_5": "res://assets/dialogic/timeline/orb_5.dtl",
 "orb_6": "res://assets/dialogic/timeline/orb_6.dtl",
 "orb_7": "res://assets/dialogic/timeline/orb_7.dtl",
+"tutorial_1": "res://assets/dialogic/timeline/tutorial_1.dtl",
 "weak": "res://assets/dialogic/timeline/weak.dtl"
 }
 layout/style_directory={

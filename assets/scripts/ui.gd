@@ -9,7 +9,7 @@ func _ready() -> void:
 	pass
 
 func _process(_delta: float) -> void:
-	fps_counter_label.text = "FPS: " + str(snapped(Engine.get_frames_per_second(), 0.01))
+	fps_counter_label.text = "FPS: " + str(snapped(Engine.get_frames_per_second(), 0))
 	if Global.find_10th_orb == true and find_10_orb_once == false:
 		find_10_orb_once = true
 		objective_text("Find the last orb")

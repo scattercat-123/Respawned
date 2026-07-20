@@ -8,6 +8,13 @@
 [ext_resource type="FontFile" uid="uid://3j22hkpuyqc7" path="res://assets/fonts/Super Starfish.ttf" id="4_8i7bg"]
 [ext_resource type="Texture2D" uid="uid://bhexy6ywk8p6b" path="res://assets/images/orb.png" id="5_ejtgv"]
 [ext_resource type="FontFile" uid="uid://c6k0x810ou3mq" path="res://assets/fonts/Recoleta-RegularDEMO.otf" id="8_iadm1"]
+[ext_resource type="FontFile" uid="uid://b2avn8db7panp" path="res://assets/fonts/BaruzenKarmaFreeRegular-Jp95K.ttf" id="9_ejtgv"]
+[ext_resource type="Texture2D" uid="uid://d1yhddb2kogmd" path="res://assets/images/Keyboard Letters and Symbols.png" id="10_lsy7d"]
+[ext_resource type="Texture2D" uid="uid://dumaauyjj0ah1" path="res://assets/images/boundry.png" id="11_lsy7d"]
+[ext_resource type="Script" uid="uid://c64xqf5qk8lxa" path="res://assets/scripts/developer_note.gd" id="12_n4maj"]
+[ext_resource type="Texture2D" uid="uid://jwi77q7efoar" path="res://assets/images/thumbsupemogi.webp" id="13_0ye03"]
+[ext_resource type="Texture2D" uid="uid://yfcu40duknii" path="res://assets/images/x-button.png" id="14_fqru5"]
+[ext_resource type="Texture2D" uid="uid://cotwogv3x4e0x" path="res://assets/images/resume_button.webp" id="15_22qfs"]
 
 [sub_resource type="Animation" id="Animation_vtcha"]
 length = 0.001
@@ -34,6 +41,45 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-31, -118)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tutorial/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("developer note:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1080)]
+}
+
+[sub_resource type="Animation" id="Animation_02fsc"]
+resource_name = "developers_note_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("developer note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -1080), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_7013b"]
@@ -67,12 +113,122 @@ tracks/0/keys = {
 "values": [Vector2(-31, -118), Vector2(-31, -27)]
 }
 
+[sub_resource type="Animation" id="Animation_vo4ur"]
+resource_name = "press"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tutorial/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iadm1"]
 _data = {
 &"RESET": SubResource("Animation_vtcha"),
+&"developers_note_in": SubResource("Animation_02fsc"),
 &"objective_in": SubResource("Animation_7013b"),
-&"orbs_collected_ui_move_in": SubResource("Animation_iadm1")
+&"orbs_collected_ui_move_in": SubResource("Animation_iadm1"),
+&"press": SubResource("Animation_vo4ur")
 }
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iobc0"]
+atlas = ExtResource("10_lsy7d")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4maj"]
+atlas = ExtResource("10_lsy7d")
+region = Rect2(64, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ye03"]
+atlas = ExtResource("10_lsy7d")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqru5"]
+atlas = ExtResource("10_lsy7d")
+region = Rect2(80, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo4ur"]
+atlas = ExtResource("10_lsy7d")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24vfs"]
+atlas = ExtResource("10_lsy7d")
+region = Rect2(32, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22qfs"]
+atlas = ExtResource("11_lsy7d")
+region = Rect2(20, 10, 10, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iobc0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iobc0")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4maj")
+}],
+"loop": true,
+"name": &"1_press",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ye03")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqru5")
+}],
+"loop": true,
+"name": &"2_press",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo4ur")
+}],
+"loop": false,
+"name": &"c",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24vfs")
+}],
+"loop": false,
+"name": &"c_press",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22qfs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvtcw"]
+size = Vector2(5.921344, 14.629226)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ju63t"]
+size = Vector2(121, 118)
 
 [node name="UI" type="CanvasLayer" unique_id=1456213080]
 script = ExtResource("1_ybygq")
@@ -236,10 +392,82 @@ wait_time = 3.0
 libraries/ = SubResource("AnimationLibrary_iadm1")
 
 [node name="Fps_counter_label" type="Label" parent="." unique_id=1397197530]
-offset_left = 9.0
-offset_top = 8.0
-offset_right = 142.0
-offset_bottom = 63.0
+offset_left = 1765.0
+offset_top = 19.0
+offset_right = 1898.0
+offset_bottom = 74.0
 theme_override_fonts/font = ExtResource("8_iadm1")
 theme_override_font_sizes/font_size = 40
 text = "FPS: 67"
+
+[node name="Tutorial" type="Node2D" parent="." unique_id=762425037]
+
+[node name="Label" type="Label" parent="Tutorial" unique_id=771552231]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1552.0
+offset_top = 925.0
+offset_right = 1728.0
+offset_bottom = 1033.0
+theme_override_fonts/font = ExtResource("9_ejtgv")
+theme_override_font_sizes/font_size = 80
+text = "Press"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tutorial" unique_id=1013093725]
+texture_filter = 1
+position = Vector2(1826, 978)
+scale = Vector2(12, 12)
+sprite_frames = SubResource("SpriteFrames_iobc0")
+animation = &"2_press"
+autoplay = "default"
+
+[node name="developer note" type="Node2D" parent="." unique_id=292302308]
+position = Vector2(0, -1080)
+script = ExtResource("12_n4maj")
+
+[node name="ColorRect" type="ColorRect" parent="developer note" unique_id=1517923022]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="developer note" unique_id=1816648491]
+offset_left = 37.0
+offset_top = 34.0
+offset_right = 1756.0
+offset_bottom = 679.0
+theme_override_font_sizes/font_size = 50
+text = "Hi! This is the developer, the game is currently a work in progress so i have to add more stuff soon, right now you can exit the game by pressing the X icon or continue to checkout the mechanics by pressing the resume button. If you are a reviewer thanks for making it till here! And if you are just someone who is playing this game thanks for giving this a chance. Cya and you can expect more stuff soon like enemies and boss fights! Sorry since i feel like this game isnt properly built like the idea and all but i will be making this better soon!"
+autowrap_mode = 3
+
+[node name="Thumbsupemogi" type="Sprite2D" parent="developer note" unique_id=1664507007]
+position = Vector2(1614.0001, 774.00006)
+scale = Vector2(2.7675009, 2.8650002)
+texture = ExtResource("13_0ye03")
+
+[node name="XButton" type="Sprite2D" parent="developer note" unique_id=1292752612]
+position = Vector2(1823, 100)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("14_fqru5")
+
+[node name="Area2D" type="Area2D" parent="developer note/XButton" unique_id=1649689660]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="developer note/XButton/Area2D" unique_id=569459270]
+position = Vector2(-6446.327, 3873.5256)
+rotation = -3.1415925
+scale = Vector2(390.56268, 63.08915)
+shape = SubResource("RectangleShape2D_yvtcw")
+
+[node name="ResumeButton" type="Sprite2D" parent="developer note" unique_id=128486157]
+position = Vector2(533, 880)
+texture = ExtResource("15_22qfs")
+
+[node name="Area2D" type="Area2D" parent="developer note/ResumeButton" unique_id=160759146]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="developer note/ResumeButton/Area2D" unique_id=1734222588]
+position = Vector2(1288.5, -779)
+shape = SubResource("RectangleShape2D_ju63t")
+
+[connection signal="mouse_entered" from="developer note/XButton/Area2D" to="developer note" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="developer note/XButton/Area2D" to="developer note" method="_on_area_2d_mouse_exited"]
+[connection signal="area_entered" from="developer note/ResumeButton/Area2D" to="developer note" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="developer note/ResumeButton/Area2D" to="developer note" method="_on_area_2d_area_exited"]

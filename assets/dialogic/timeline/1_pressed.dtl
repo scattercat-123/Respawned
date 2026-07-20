@@ -1,0 +1,4 @@
+man: That punch felt powerfull! I can also do a punch combo with "Shift + 1"!
+man: I can also kick using "2" while still in combat mode.
+[signal arg="2_press"]
+man: Let me try..

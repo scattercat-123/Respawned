@@ -1,11 +1,12 @@
 extends CharacterBody3D
-@onready var mesh: Node3D = $AuxScene5
+@onready var mesh: Node3D = $AuxScene6
 @onready var camera_spring_arm: SpringArm3D = $"../Camera/SpringArm3D"
 @onready var camera: Camera3D = $"../Camera/SpringArm3D/Camera3D"
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var floating_text: CanvasLayer = $"Floating text"
 @onready var debug_label: Label = $Debug/Label
 @onready var running: AudioStreamPlayer3D = $sounds/running
+@onready var groan: AudioStreamPlayer3D = $sounds/groan
 
 const FLOATING_TXT = preload("uid://cfdtq2rpm7d3v")
 
@@ -81,10 +82,12 @@ func _process(_delta: float) -> void:
 		Global.find_10th_orb = true
 		await get_tree().create_timer(10).timeout
 		Dialogic.start_timeline("cannot_find_10th_orb")
-		await get_tree().create_timer(3).timeout
+		await Dialogic.timeline_ended
+		Dialogic.start_timeline("weak")
+		await Dialogic.timeline_ended
+		groan.play()
 		cutscene_mode = true
 		animation_player.play("combat-weak")
-		Dialogic.start_timeline("weak")
 		await get_tree().create_timer(2.5).timeout
 		Global.ill = true
 
@@ -275,3 +278,8 @@ func _unhandled_input(event: InputEvent) -> void:
 func random(many : int, what : Array):
 	var rand = randi_range(0, many-1)
 	return what[rand]
+
+func cutscene_changer(true_or_false : bool):
+	cutscene_mode = true_or_false
+	if true_or_false == false:
+		animation_player.play("combat-idle")

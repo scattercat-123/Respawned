@@ -1,8 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1784556117
+::res://::1784586799
+export_presets.cfg::TextFile::-1::1784565191::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::1790880795757653::1783595927::1783621115::1::::<><><>0<>0<>1d558fff71561543e2cf7e0d300c3350<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1783595926::0::1::::<><><>0<>0<><>::
-::res://addons/::1784552365
+::res://addons/::1784578174
 ::res://addons/dialogic/::1783621277
 plugin.cfg::TextFile::-1::1783621268::0::1::::<><><>0<>0<><>::
 plugin.gd::GDScript::3847838834304660710::1783621268::0::1::::<>EditorPlugin<><>0<>1<><>::
@@ -668,21 +669,26 @@ custom_tab.gd::GDScript::3471091704543533932::1784552366::0::1::::<>Button<><>0<
 multiline_tab_bar.gd::GDScript::826788674424172162::1784552366::0::1::::<>PanelContainer<><>0<>1<><>::
 multiline_tab_bar.tscn::PackedScene::1493773027729435784::1784552366::0::1::::<><><>0<>0<><>::uid://l1rdargfn67o::::res://addons/script-ide/tabbar/multiline_tab_bar.gd
 ::res://assets/::1783621396
-::res://assets/dialogic/::1784546475
-default_style.tres::Resource/DialogicStyle::2973376408472122187::1784545721::0::1::::<><><>0<>0<><>::uid://cqpb3ie51rwl5::::res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn<>uid://bwg6yncmh2cml::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://3kpvcrr31une::::res://assets/dialogic/TextboxWithPortrait/custom_textbox_with_portrait_.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dv08k6ljua6fm::::res://addons/dialogic/Resources/dialogic_style.gd
+::res://assets/dialogic/::1784578241
+default_style.tres::Resource/DialogicStyle::2973376408472122187::1784578240::0::1::::<><><>0<>0<><>::uid://cqpb3ie51rwl5::::res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn<>uid://bwg6yncmh2cml::::res://addons/dialogic/Resources/dialogic_style_layer.gd<>uid://3kpvcrr31une::::res://assets/dialogic/TextboxWithPortrait/custom_textbox_with_portrait_.tscn<>uid://dsbwnp5hegnu3::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn<>uid://dhk6j6eb6e3q::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn<>uid://cvgf4c6gg0tsy::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn<>uid://lx24i8fl6uo::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn<>uid://dv08k6ljua6fm::::res://addons/dialogic/Resources/dialogic_style.gd
 man.dch::Resource/DialogicCharacter::5694061499648777464::1784546475::0::1::::<><>uid://bbea0efx0ybu7<>0<>0<><>::res://assets/images/man_potrait.png
 ::res://assets/dialogic/TextboxWithPortrait/::1783622704
 custom_textbox_with_portrait_.tscn::PackedScene::1986879788088244734::1783622704::0::1::::<><><>0<>0<><>::uid://d0ptqnbudhkyj::::res://addons/dialogic/Modules/Character/node_portrait_container.gd<>uid://bk84r61kckpxa::::res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/speaker_portrait_textbox_layer.gd<>uid://bak74s0kcr0ao::::res://addons/dialogic/Modules/Text/node_name_label.gd<>uid://drhfq6rmdeuri::::res://addons/dialogic/Modules/Text/node_dialog_text.gd<>uid://dpv2dfiv5dhmr::::res://addons/dialogic/Modules/Text/node_type_sound.gd
 speaker_portrait_textbox_layer.gd::GDScript::123864720468126445::1783622634::0::1::::<>DialogicLayoutLayer<><>0<>1<><>::
-::res://assets/dialogic/timeline/::1784556117
+::res://assets/dialogic/timeline/::1784586799
+cannot_find_10th_orb.dtl::Resource/DialogicTimeline::6298257176229532837::1784559617::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
 orb_1.dtl::Resource/DialogicTimeline::6630807294274927565::1783949898::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
 orb_2.dtl::Resource/DialogicTimeline::6458629543235400497::1784547521::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
 orb_3.dtl::Resource/DialogicTimeline::8542380063098956787::1784547536::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
 orb_4.dtl::Resource/DialogicTimeline::1536927867851512372::1784547555::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
 orb_5.dtl::Resource/DialogicTimeline::2461521209066075621::1784553781::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
 orb_6.dtl::Resource/DialogicTimeline::4721387121935710142::1784547705::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
-orb_7.dtl::Resource/DialogicTimeline::6285782171315751101::1784550217::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
-cannot_find_10th_orb.dtl::Resource/DialogicTimeline::6298257176229532837::1784556117::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::
+orb_7.dtl::Resource/DialogicTimeline::6285782171315751101::1784576681::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
+c_pressed.dtl::Resource/DialogicTimeline::5051741259627299547::1784584684::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
+1_pressed.dtl::Resource/DialogicTimeline::237660347666224520::1784584826::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
+2_pressed.dtl::Resource/DialogicTimeline::7681731570664964764::1784586799::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
+tutorial_1.dtl::Resource/DialogicTimeline::6172582240036685411::1784579732::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
+weak.dtl::Resource/DialogicTimeline::3673236746554339473::1784576507::0::1::::<><>uid://j7ym07anlusi<>0<>0<><>::uid://cneimjkhe88y3
 ::res://assets/fonts/::1783623244
 BaruzenKarmaFreeRegular-Jp95K.ttf::FontFile::4282819472082591009::1783623226::1783623244::1::::<><><>0<>0<>aa27c412ba7772a8dcfec5dabcc6d992<>res://.godot/imported/BaruzenKarmaFreeRegular-Jp95K.ttf-249dfe3110d482a25f7af23b0ac1ac59.fontdata::
 floating_txt.tres::Theme::5131162359494543033::1783595926::0::1::::<><><>0<>0<><>::uid://80na557qr1u3::::res://assets/fonts/KiyomoriDemo-BLvqx.ttf
@@ -691,10 +697,11 @@ KiyomoriDemo-BLvqx.ttf::FontFile::2368632228333177780::1783595926::1783621115::1
 para.tres::Theme::122102579623008244::1783595926::0::1::::<><><>0<>0<><>::
 Recoleta-RegularDEMO.otf::FontFile::6970900070375660728::1783595926::1783621115::1::::<><><>0<>0<>26d390e0564c49634b8a8c0cb4cd81f4<>res://.godot/imported/Recoleta-RegularDEMO.otf-be33bc070017e03e5a70859b7c5a0c6f.fontdata::
 Super Starfish.ttf::FontFile::1985554980712286596::1783595926::1783621115::1::::<><><>0<>0<>19ef8b6c820215383d54f93e39dabd3e<>res://.godot/imported/Super Starfish.ttf-e04f8f7468cae6a14793efacd74b277b.fontdata::
-::res://assets/images/::1784549573
+::res://assets/images/::1784587744
 back.png::CompressedTexture2D::2417563224085272339::1783595926::1783621115::1::::<><><>0<>0<>990281010c17e5fb88e9bc2dee1d0a1f<>res://.godot/imported/back.png-ad3079d43f17cbd56680f81ab45368a2.ctex::
 boundry.png::CompressedTexture2D::8587812544852905728::1783595926::1783621116::1::::<><><>0<>0<>131bfc5ea9c15f3d79a32e52d0dd1c89<>res://.godot/imported/boundry.png-ee37819b35a72440226e9e0c4d341ac0.s3tc.ctex::
 ground.png::CompressedTexture2D::3237892889571162676::1783595926::1783621116::1::::<><><>0<>0<>6c32cb3ec634f0b4ab7ad3dfb689d3b6<>res://.godot/imported/ground.png-a10a452afa2dab242aacf15617dc4109.s3tc.ctex::
+Keyboard Letters and Symbols.png::CompressedTexture2D::9034147588452191971::1784582873::1784582877::1::::<><><>0<>0<>047493937ca853351e0ede863220a5cc<>res://.godot/imported/Keyboard Letters and Symbols.png-d8a60c0423e07dcd9a236a6ce30d7893.ctex::
 man_potrait.png::CompressedTexture2D::3727919559619429074::1783622288::1783622310::1::::<><><>0<>0<>fd3d42830278ced2fae736bcca5b310a<>res://.godot/imported/man_potrait.png-5037ae3714c5260e95074ef1271f67f2.ctex::
 music_symbol_sprite_sheet.png::CompressedTexture2D::1288045131385213912::1783595926::1783621116::1::::<><><>0<>0<>6f095762d509272db0261b877fb4dc97<>res://.godot/imported/music_symbol_sprite_sheet.png-305673bc97f97dbe27f6244fb727e5bf.ctex::
 objective_background.png::CompressedTexture2D::6593873516738733252::1783934626::1783939257::1::::<><><>0<>0<>ca84a17ef8bcb26d789ff9c1ea44df03<>res://.godot/imported/objective_background.png-890ef03395696c711a21db851abedf87.ctex::
@@ -702,32 +709,36 @@ orb.png::CompressedTexture2D::2887441116376331587::1784547833::1784549573::1::::
 orb_texture.png::CompressedTexture2D::941621890414783990::1783948586::1783950550::1::::<><><>0<>0<>25a11455d411325dbcab0aa0926f4ab0<>res://.godot/imported/orb_texture.png-e1519aaa3e9107d67e5b25c2c72fa451.s3tc.ctex::
 orb_ui.png::CompressedTexture2D::6743938676546923855::1784548350::1784548355::1::::<><><>0<>0<>2cd4704918ed0c741b0b23f41fe9e024<>res://.godot/imported/orb_ui.png-ec35aa240d7d417222818e01a5537602.ctex::
 pfpMeoth.png::CompressedTexture2D::3308392617252491856::1783595926::1783621115::1::::<><><>0<>0<>63178a4b46a3ef6727b9835e3fd9cf4f<>res://.godot/imported/pfpMeoth.png-591eab20581109fd204be21695d82389.ctex::
+resume_button.webp::CompressedTexture2D::5796069479486388497::1784587745::1784587745::1::::<><><>0<>0<>c6160a0e005ccbaf333d7be8928d6d85<>res://.godot/imported/resume_button.webp-e49ee959881017828655aa936f1034b9.ctex::
 return-to-menu-1.png::CompressedTexture2D::7864691017702874355::1783595926::1783621115::1::::<><><>0<>0<>68c0e4786ca0dc7b5f794ef661dee768<>res://.godot/imported/return-to-menu-1.png-9d46e4f4e9a3469f82d416da1ff0d98c.ctex::
 return-to-menu-2.png::CompressedTexture2D::2047548228876080579::1783595926::1783621115::1::::<><><>0<>0<>3694cc6cc5b3769e93027e8bf4f6a701<>res://.godot/imported/return-to-menu-2.png-6cdbe65643b81cf3605ad09ccd3ba93f.ctex::
 settings-1.png::CompressedTexture2D::6252775136917416850::1783595926::1783621115::1::::<><><>0<>0<>54497889804d7314b99e4fd405b7cb8e<>res://.godot/imported/settings-1.png-2520fdcd423542d65693850dd7280a00.ctex::
 settings-2.png::CompressedTexture2D::2722015606528920104::1783595926::1783621115::1::::<><><>0<>0<>91c5d35cdbd383de142be0896dc536ec<>res://.godot/imported/settings-2.png-b65f4eb3f69200af114a21ba43afa00c.ctex::
-::res://assets/models/::1784559532
-combat.gltf::PackedScene::3409590486065385351::1784559506::1784559537::1::::<><><>0<>0<>c61176f4bef06a5d0b671972dfc0f24f<>res://.godot/imported/combat.gltf-111958dd02829a7d46645fe83534f64c.scn::
-::res://assets/scenes/::1784555505
+thumbsupemogi.webp::CompressedTexture2D::677660491602261809::1784587441::1784587443::1::::<><><>0<>0<>42f1c77a5228100f761b37fddb94908e<>res://.godot/imported/thumbsupemogi.webp-2cf881362cf43791407dd0d71c445689.ctex::
+tutorial_box_texture.png::CompressedTexture2D::1910640039350051668::1784562903::1784566081::1::::<><><>0<>0<>c746d078d79e5e10de026c1840717a89<>res://.godot/imported/tutorial_box_texture.png-328a8292cd93e58a15df7a147473064c.s3tc.ctex::
+x-button.png::CompressedTexture2D::1695012847907412860::1784587699::1784587704::1::::<><><>0<>0<>fd56ebedaedc02b08a814f2918ef419a<>res://.godot/imported/x-button.png-668cd0c3ac7b4ee152137247ee13d539.ctex::
+::res://assets/models/::1784585809
+combat.gltf::PackedScene::2842606287088852276::1784585410::1784585809::1::::<><><>0<>0<>13e807428b603a3800a1c3ff3f92c991<>res://.godot/imported/combat.gltf-111958dd02829a7d46645fe83534f64c.scn::
+::res://assets/scenes/::1784587075
 camera.tscn::PackedScene::5876721227251346645::1784553715::0::1::::<><><>0<>0<><>::
-chatacter.tscn::PackedScene::3789698607489013954::1784554635::0::1::::<><><>0<>0<><>::uid://bdkx2ghc3tivm::::res://assets/scripts/chatacter.gd<>uid://c75sjlbuq5fo4::::res://assets/sounds/running.mp3<>uid://bwonghdsp4gkj::::res://assets/sounds/jump1.mp3<>uid://csk4hfpngkrlk::::res://assets/sounds/jump2.mp3<>uid://cgirt7xyb5gpi::::res://assets/sounds/jump3.mp3<>uid://dmdhicdf1ja65::::res://assets/sounds/jump4.mp3<>uid://dwo6lj4xn2gel::::res://assets/sounds/land1.mp3<>uid://dtck42xaps1a0::::res://assets/sounds/land2.mp3<>uid://cu1xvqejj45h::::res://assets/sounds/land3.mp3<>uid://cxmjciqsxogty::::res://assets/sounds/land4.mp3
+chatacter.tscn::PackedScene::3789698607489013954::1784586191::0::1::::<><><>0<>0<><>::uid://bdkx2ghc3tivm::::res://assets/scripts/chatacter.gd<>uid://c75sjlbuq5fo4::::res://assets/sounds/running.mp3<>uid://bwonghdsp4gkj::::res://assets/sounds/jump1.mp3<>uid://csk4hfpngkrlk::::res://assets/sounds/jump2.mp3<>uid://cgirt7xyb5gpi::::res://assets/sounds/jump3.mp3<>uid://dmdhicdf1ja65::::res://assets/sounds/jump4.mp3<>uid://dwo6lj4xn2gel::::res://assets/sounds/land1.mp3<>uid://dtck42xaps1a0::::res://assets/sounds/land2.mp3<>uid://cu1xvqejj45h::::res://assets/sounds/land3.mp3<>uid://cxmjciqsxogty::::res://assets/sounds/land4.mp3<>uid://t3hlap8twknu::::res://assets/sounds/dragon-studio-male-groan-of-pain-357971.mp3
 esc_settings.tscn::PackedScene::7842837325346578830::1783595926::0::1::::<><><>0<>0<><>::uid://c7g3ai24l5d5n::::res://assets/scripts/settings_menu.gd<>uid://dkbykuxp8pqpn::::res://assets/images/return-to-menu-1.png<>uid://4f325ek13ye2::::res://assets/images/return-to-menu-2.png<>uid://ccybxfcdnwsgr::::res://assets/sounds/click.wav<>uid://be1tg1pgajf7m::::res://assets/images/settings-2.png<>uid://cvc5j7wvg54x7::::res://assets/images/settings-1.png<>uid://bapc6bsdn5cg6::::res://assets/images/back.png<>uid://c6k0x810ou3mq::::res://assets/fonts/Recoleta-RegularDEMO.otf<>uid://crhxfwitt81er::::res://assets/scripts/fov_slider.gd
 intro.tscn::PackedScene::2798280498699528551::1783947731::0::1::::<><><>0<>0<><>::uid://bneu0i7ummrwa::::res://assets/images/pfpMeoth.png<>uid://ddi1b4x7lf3od::::res://assets/scripts/intro.gd<>uid://4q335xxs2p::::res://icon.svg<>uid://c53jh7bg0djiu::::res://assets/fonts/heading.tres<>uid://c6k0x810ou3mq::::res://assets/fonts/Recoleta-RegularDEMO.otf<>uid://b0fanp1jrm2w::::res://assets/fonts/para.tres<>uid://80na557qr1u3::::res://assets/fonts/KiyomoriDemo-BLvqx.ttf<>uid://hjx4sl6smwjx::::res://assets/scenes/world.tscn<>uid://cif7ll73bj58d::::res://assets/sounds/shine.mp3<>uid://dmro5fjie1bq5::::res://assets/sounds/bass_drop.mp3<>uid://bb54lr8vwl036::::res://assets/sounds/01. Gwyn, Lord of Cinder.mp3<>uid://dxtgcv8s2gcxt::::res://assets/sounds/Brentin Davis - Combat Fire.mp3<>uid://3j22hkpuyqc7::::res://assets/fonts/Super Starfish.ttf<>uid://dap7maiyiw0mw::::res://assets/sounds/Dorian Concept - 'Hide (CS01 Version)' (Official Video) - Dorian Concept.mp3<>uid://dtxki71kj8k0t::::res://assets/sounds/06. Encounter.mp3<>uid://sl66d5gyhqey::::res://assets/images/music_symbol_sprite_sheet.png
-orb.tscn::PackedScene::8733878491726518316::1784555505::0::1::::<><><>0<>0<><>::uid://dpctanc0icqmp::::res://assets/scripts/orb.gd<>uid://noem0pr28bgo::::res://assets/images/orb_texture.png<>uid://ceoefyp4euvoe::::res://assets/sounds/dragon-studio-distant-bang-472364.mp3<>uid://bvqwjq0u8uiau::::res://assets/sounds/tithuh-powerup-success-523645.mp3
-ui.tscn::PackedScene::2765531411652534880::1784550483::0::1::::<><><>0<>0<><>::uid://do4u66lgsay7o::::res://assets/scripts/ui.gd<>uid://c6mbvef2sxco5::::res://assets/scripts/orb_ui.gd<>uid://c07eesi4vrxhc::::res://assets/images/objective_background.png<>uid://80na557qr1u3::::res://assets/fonts/KiyomoriDemo-BLvqx.ttf<>uid://c3c2xjrqsixcp::::res://assets/images/orb_ui.png<>uid://3j22hkpuyqc7::::res://assets/fonts/Super Starfish.ttf<>uid://bhexy6ywk8p6b::::res://assets/images/orb.png
-world.tscn::PackedScene::511350547955836097::1784555075::0::1::::<><><>0<>0<><>::uid://dwrtiqako8t5d::::res://assets/scripts/world.gd<>uid://bmepvf8xbhj6k::::res://assets/images/ground.png<>uid://bt801uo2fx0la::::res://assets/scenes/chatacter.tscn<>uid://dj0enc663c0by::::res://assets/scenes/esc_settings.tscn<>uid://cpyy0fpqfs4fx::::res://assets/scenes/camera.tscn<>uid://gfbvw4toyrsv::::res://assets/scripts/world-boundry.gdshader<>uid://dumaauyjj0ah1::::res://assets/images/boundry.png<>uid://bfnv5so2ufg85::::res://assets/scenes/ui.tscn
-::res://assets/scripts/::1784555506
-chatacter.gd::GDScript::2619076025499633614::1784555505::0::1::::<>CharacterBody3D<><>0<>0<><>::
+orb.tscn::PackedScene::8733878491726518316::1784577092::0::1::::<><><>0<>0<><>::uid://dpctanc0icqmp::::res://assets/scripts/orb.gd<>uid://noem0pr28bgo::::res://assets/images/orb_texture.png<>uid://ceoefyp4euvoe::::res://assets/sounds/dragon-studio-distant-bang-472364.mp3<>uid://bvqwjq0u8uiau::::res://assets/sounds/tithuh-powerup-success-523645.mp3
+ui.tscn::PackedScene::2765531411652534880::1784583823::0::1::::<><><>0<>0<><>::uid://do4u66lgsay7o::::res://assets/scripts/ui.gd<>uid://c6mbvef2sxco5::::res://assets/scripts/orb_ui.gd<>uid://c07eesi4vrxhc::::res://assets/images/objective_background.png<>uid://80na557qr1u3::::res://assets/fonts/KiyomoriDemo-BLvqx.ttf<>uid://c3c2xjrqsixcp::::res://assets/images/orb_ui.png<>uid://3j22hkpuyqc7::::res://assets/fonts/Super Starfish.ttf<>uid://bhexy6ywk8p6b::::res://assets/images/orb.png<>uid://c6k0x810ou3mq::::res://assets/fonts/Recoleta-RegularDEMO.otf<>uid://b2avn8db7panp::::res://assets/fonts/BaruzenKarmaFreeRegular-Jp95K.ttf<>uid://d1yhddb2kogmd::::res://assets/images/Keyboard Letters and Symbols.png<>uid://dumaauyjj0ah1::::res://assets/images/boundry.png
+world.tscn::PackedScene::511350547955836097::1784587075::0::1::::<><><>0<>0<><>::uid://dwrtiqako8t5d::::res://assets/scripts/world.gd<>uid://bmepvf8xbhj6k::::res://assets/images/ground.png<>uid://bt801uo2fx0la::::res://assets/scenes/chatacter.tscn<>uid://dj0enc663c0by::::res://assets/scenes/esc_settings.tscn<>uid://cpyy0fpqfs4fx::::res://assets/scenes/camera.tscn<>uid://gfbvw4toyrsv::::res://assets/scripts/world-boundry.gdshader<>uid://dumaauyjj0ah1::::res://assets/images/boundry.png<>uid://bfnv5so2ufg85::::res://assets/scenes/ui.tscn<>uid://2hr7yoiix0bw::::res://assets/images/tutorial_box_texture.png
+::res://assets/scripts/::1784587075
+chatacter.gd::GDScript::2619076025499633614::1784586747::0::1::::<>CharacterBody3D<><>0<>0<><>::
 fov_slider.gd::GDScript::5981908942076453401::1784555505::0::1::::<>HSlider<><>0<>0<><>::
-Global.gd::GDScript::3105954191782423772::1784555075::0::1::::<>Node<><>0<>0<><>::
+Global.gd::GDScript::3105954191782423772::1784586747::0::1::::<>Node<><>0<>0<><>::
 intro.gd::GDScript::7387925591808229863::1784555506::0::1::::<>Node2D<><>0<>0<><>::
-orb.gd::GDScript::8217377771060305815::1784555506::0::1::::<>Node3D<><>0<>0<><>::
+orb.gd::GDScript::8217377771060305815::1784577011::0::1::::<>Node3D<><>0<>0<><>::
 orb_ui.gd::GDScript::6973566490947832570::1784555506::0::1::::<>Node2D<><>0<>0<><>::
 settings_menu.gd::GDScript::7032971169355089045::1784555506::0::1::::<>Control<><>0<>0<><>::
-ui.gd::GDScript::8203044161859269582::1784555506::0::1::::<>CanvasLayer<><>0<>0<><>::
-world-boundry.gdshader::Shader::431554370459239037::1784545721::0::1::::<><><>0<>0<><>::
-world.gd::GDScript::8739679782996819059::1784555300::0::1::::<>Node3D<><>0<>0<><>::
-::res://assets/sounds/::1784546309
+ui.gd::GDScript::8203044161859269582::1784579732::0::1::::<>CanvasLayer<><>0<>0<><>::
+world-boundry.gdshader::Shader::431554370459239037::1784578241::0::1::::<><><>0<>0<><>::
+world.gd::GDScript::8739679782996819059::1784587075::0::1::::<>Node3D<><>0<>0<><>::
+::res://assets/sounds/::1784575698
 01. Gwyn, Lord of Cinder.mp3::AudioStreamMP3::2520322241335611731::1783595926::1783621115::1::::<><><>0<>0<>5572299240d2716a95b904c2f2fed645<>res://.godot/imported/01. Gwyn, Lord of Cinder.mp3-b0dac1cf2812e60dfe8fd79278e351e9.mp3str::
 06. Encounter.mp3::AudioStreamMP3::8540953946204007269::1783595926::1783621115::1::::<><><>0<>0<>4571581b8384e69777b552a69f713af9<>res://.godot/imported/06. Encounter.mp3-2320b78686a37df73e3d7371df9e06c0.mp3str::
 bass_drop.mp3::AudioStreamMP3::8037526485160428178::1783595926::1783621115::1::::<><><>0<>0<>306b783c9a4d4db4eb5cf13665081a18<>res://.godot/imported/bass_drop.mp3-3ae1823e0fc846e10eee5ec470bbbf65.mp3str::
@@ -736,6 +747,7 @@ buzzing.mp3::AudioStreamMP3::4681324730234131462::1783595926::1783621115::1::::<
 click.wav::AudioStreamWAV::4962866176873204485::1783595926::1783621116::1::::<><><>0<>0<>6f902014e8df62cfa04022db4811d77d<>res://.godot/imported/click.wav-6af01c357158287f6c248cf59f42edea.sample::
 Dorian Concept - 'Hide (CS01 Version)' (Official Video) - Dorian Concept.mp3::AudioStreamMP3::7192192104146055618::1783595926::1783621115::1::::<><><>0<>0<>7f35f85885bf553197e2487e04d49a94<>res://.godot/imported/Dorian Concept - 'Hide (CS01 Version)' (Official Video) - Dorian Concept.mp3-24e1a129e2b2729fcb5a2070fcf8a146.mp3str::
 dragon-studio-distant-bang-472364.mp3::AudioStreamMP3::5082751112492012020::1784113237::1784113650::1::::<><><>0<>0<>64efdf48ad06995b5fa7f60294bf66d8<>res://.godot/imported/dragon-studio-distant-bang-472364.mp3-d4cb98d44a9a3d888b17de59ac61b579.mp3str::
+dragon-studio-male-groan-of-pain-357971.mp3::AudioStreamMP3::1391835293616310454::1784575678::1784575698::1::::<><><>0<>0<>fa37378956229e1873fc67dfea58752f<>res://.godot/imported/dragon-studio-male-groan-of-pain-357971.mp3-3f3e8c8e82532a8edaed6b94ccef3f8d.mp3str::
 dragon-studio-single-key-press-393908.mp3::AudioStreamMP3::8594318529641580309::1784124196::1784124218::1::::<><><>0<>0<>6e1b32ccb1f0d756bc89cb7596a54cfc<>res://.godot/imported/dragon-studio-single-key-press-393908.mp3-7251e80cf08bb39e346ad3fc444c2614.mp3str::
 jump1.mp3::AudioStreamMP3::3960276941092937805::1783595926::1783621115::1::::<><><>0<>0<>212f7667288029b3a70fe300889d2df5<>res://.godot/imported/jump1.mp3-d1b0ec88d54cfbfa8aaa349dc3568261.mp3str::
 jump2.mp3::AudioStreamMP3::6058657910146853076::1783595926::1783621115::1::::<><><>0<>0<>36834ad8901cd492cd15aa908feaf269<>res://.godot/imported/jump2.mp3-29ece0b52763b0be05932e68afbeeb51.mp3str::
@@ -748,4 +760,4 @@ land4.mp3::AudioStreamMP3::6412507774385175254::1783595926::1783621115::1::::<><
 running.mp3::AudioStreamMP3::7081925254672903357::1783595926::1783621115::1::::<><><>0<>0<>71c0a3f9dffb46b24eaf37727317465a<>res://.godot/imported/running.mp3-cddc718c711f335556efd5762af184ea.mp3str::
 shine.mp3::AudioStreamMP3::5346637221226751413::1783595926::1783621115::1::::<><><>0<>0<>4e7fd89335bb81c1e5192ba1eea27a40<>res://.godot/imported/shine.mp3-fec18ba69c637ad6ee1e91b9ccfd5da4.mp3str::
 tithuh-powerup-success-523645.mp3::AudioStreamMP3::3894769170090059428::1784546289::1784546309::1::::<><><>0<>0<>55a649bb224109ee9e7ca3dffed82164<>res://.godot/imported/tithuh-powerup-success-523645.mp3-1fc80531e73b7648c58d690ac3bae3ab.mp3str::
-::res://game_files/::1783595998
+::res://game_files/::1784565200

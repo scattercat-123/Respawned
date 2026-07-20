@@ -6,9 +6,14 @@ extends Node3D
 @onready var overlay_player: AnimationPlayer = $Overlay/AnimationPlayer
 @onready var player_animation: AnimationPlayer = $Character/AnimationPlayer
 @onready var ui: CanvasLayer = $UI
+@onready var keyboard_sprite: AnimatedSprite2D = $UI/Tutorial/AnimatedSprite2D
+@onready var keyboard_label: Label = $UI/Tutorial/Label
+@onready var ui_animation_player: AnimationPlayer = $UI/AnimationPlayer
 
 var memory_orb = preload("res://assets/scenes/orb.tscn")
 var last_collected_orb = 0
+var illness_started = false
+var pressing_key_tutorial = ""
 
 signal mouse_visible
 signal mouse_capture
@@ -43,10 +48,34 @@ func _process(_delta):
 			Dialogic.start_timeline("orb_6")
 		elif Global.orbs_collected == 9:
 			Dialogic.start_timeline("orb_7")
-	if Global.ill == true and $Overlay.visible == false:
-		$Overlay.visible = true
+	if Global.ill == true and illness_started == false:
+		illness_started = true
 		overlay_player.play_backwards("in")
-		
+		await get_tree().create_timer(3.0).timeout
+		character.position = Vector3(4.117, -11.9, 0)
+		overlay_player.play("in")
+		character.cutscene_changer(false)
+		await get_tree().create_timer(1.0).timeout
+		Dialogic.start("tutorial_1")
+	if pressing_key_tutorial:
+		if Input.is_action_pressed("c") and pressing_key_tutorial == "c":
+			keyboard_sprite.play("c_press")
+			await get_tree().create_timer(1.0).timeout
+			ui_animation_player.play_backwards("press")
+			pressing_key_tutorial == ""
+			Dialogic.start("c_pressed")
+		if Input.is_action_pressed("1") and pressing_key_tutorial == "1":
+			keyboard_sprite.play("1_press")
+			await get_tree().create_timer(1.0).timeout
+			ui_animation_player.play_backwards("press")
+			pressing_key_tutorial == ""
+			Dialogic.start("1_pressed")
+		if Input.is_action_pressed("2") and pressing_key_tutorial == "2":
+			keyboard_sprite.play("2_press")
+			await get_tree().create_timer(1.0).timeout
+			ui_animation_player.play_backwards("press")
+			pressing_key_tutorial == ""
+			Dialogic.start("2_pressed")
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("esc") and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and Global.settings_menu_open == false:
@@ -61,6 +90,35 @@ func _on_dialogic_signal(argument:String):
 		ui.objective_text("Look around the area for clues.")
 	if argument == "drop_orbs":
 		memory_orb_spawn(9)
+	if argument == "press_c":
+		pressing_key_tutorial = "c"
+		ui_animation_player.play("press")
+		keyboard_sprite.play("c")
+	if argument == "1_press":
+		pressing_key_tutorial = "1"
+		ui_animation_player.play("press")
+		keyboard_sprite.play("1")
+	if argument == "2_press":
+		pressing_key_tutorial = "2"
+		ui_animation_player.play("press")
+		keyboard_sprite.play("2")
+	if argument == "get_up":
+		keyboard_sprite.play("default")
+		overlay_player.play_backwards("in")
+		await overlay_player.animation_finished
+		character.position = Vector3(0, 0.75, 0)
+		overlay_player.play("in")
+		await get_tree().create_timer(0.75).timeout
+		character.cutscene_changer(true)
+		player_animation.play("combat-get-up")
+		await player_animation.animation_finished
+		character.cutscene_changer(false)
+		character.combat_mode = false
+		player_animation.play("combat-idle")
+		await get_tree().create_timer(7.5).timeout
+		ui_animation_player.play("developers_note_in")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		Input.warp_mouse(Vector2(5, 5))
 		
 func memory_orb_spawn(number:int):
 	for i in range(number):
