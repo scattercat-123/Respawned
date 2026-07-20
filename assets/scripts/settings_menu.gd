@@ -10,7 +10,7 @@ var return_to_menu_hover = false
 var last_mouse_state := false
 var back_hover = false
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if settings_hover and Input.is_action_just_pressed("lmb") and animation_player.current_animation != "Settings Open":
 		animation_player.play("Settings Open")
 		Global.settings_menu_open = true

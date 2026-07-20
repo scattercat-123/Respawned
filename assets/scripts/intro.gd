@@ -13,13 +13,17 @@ var play_button_hover = false
 
 func _ready() -> void:
 	randomize()
+	if Global.debug_mode:
+		Global.started = true
+		get_tree().change_scene_to_file("res://assets/scenes/world.tscn")
+
 	animations = person_animation.get_animation_list()
 	await get_tree().create_timer(0.75).timeout
 	shine.play()
 	await get_tree().create_timer(1.75).timeout
 	bass_drop.play()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if play_button_hover == true and Input.is_action_just_pressed("lmb"):
 		animation_player.play("play")
 		for songs in musics:

@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cpyy0fpqfs4fx" path="res://assets/scenes/camera.tscn" id="5_vu0c7"]
 [ext_resource type="Shader" uid="uid://gfbvw4toyrsv" path="res://assets/scripts/world-boundry.gdshader" id="6_bd1kc"]
 [ext_resource type="Texture2D" uid="uid://dumaauyjj0ah1" path="res://assets/images/boundry.png" id="7_6trao"]
+[ext_resource type="PackedScene" uid="uid://bfnv5so2ufg85" path="res://assets/scenes/ui.tscn" id="8_mwrnc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ypxwc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -92,6 +93,15 @@ _data = {
 &"in": SubResource("Animation_mwrnc")
 }
 
+[sub_resource type="BoxMesh" id="BoxMesh_mwrnc"]
+size = Vector3(1, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j6xc2"]
+size = Vector3(10, 10, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e345b"]
+size = Vector3(10, 1, 10)
+
 [node name="World" type="Node3D" unique_id=251520294]
 script = ExtResource("1_0moxn")
 
@@ -109,6 +119,8 @@ mesh = SubResource("PlaneMesh_vu0c7")
 surface_material_override/0 = SubResource("StandardMaterial3D_bd1kc")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=457362047]
+collision_layer = 3
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=907735492]
 shape = SubResource("ConcavePolygonShape3D_ypxwc")
@@ -194,9 +206,36 @@ color = Color(0, 0, 0, 1)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Overlay" unique_id=1135309725]
 libraries/ = SubResource("AnimationLibrary_j6xc2")
 
+[node name="UI" parent="." unique_id=1456213080 instance=ExtResource("8_mwrnc")]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1893877179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.195596, 0)
+mesh = SubResource("BoxMesh_mwrnc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=17001815]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -8.195316, 5)
+mesh = SubResource("BoxMesh_j6xc2")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=378143239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -8.195316, -5)
+mesh = SubResource("BoxMesh_j6xc2")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1295322728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -8.195316, 0)
+mesh = SubResource("BoxMesh_mwrnc")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=1482746940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -13.195316, 0)
+mesh = SubResource("BoxMesh_e345b")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=1883390346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -3.1763163, 0)
+mesh = SubResource("BoxMesh_e345b")
+
 [connection signal="mouse_capture" from="." to="Settings/Buttons" method="_on_world_mouse_capture"]
 [connection signal="mouse_visible" from="." to="Settings/Buttons" method="_on_world_mouse_visible"]
 
 [editable path="Character"]
 [editable path="Settings"]
 [editable path="Camera"]
+[editable path="UI"]

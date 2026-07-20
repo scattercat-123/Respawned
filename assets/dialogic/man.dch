@@ -1,0 +1,44 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "Default",
+"sound_moods": {
+"Default": {
+"mode": 1,
+"name": "Default",
+"pitch_base": 1.0,
+"pitch_variance": 0.0,
+"skip_characters": 1.0,
+"sound_path": "res://assets/sounds/dragon-studio-single-key-press-393908.mp3",
+"volume_base": -20.0,
+"volume_variance": 10.0
+}
+},
+"style": "default_style",
+"suffix": ""
+},
+&"default_portrait": "default",
+&"description": "",
+&"display_name": "You",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "\"res://assets/images/man_potrait.png\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(83, 220),
+"scale": 1.1,
+"scene": "",
+"sound_mood": "Default"
+}
+},
+&"scale": 1.0
+}

@@ -18,6 +18,69 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://bkisu2glwd81m"
+Dialogic="*uid://ds2q0uclmolvu"
+
+[dialogic]
+
+directories/dch_directory={
+"man": "res://assets/dialogic/man.dch"
+}
+directories/dtl_directory={
+"cannot_find_10th_orb": "res://assets/dialogic/timeline/cannot_find_10th_orb.dtl",
+"orb_1": "res://assets/dialogic/timeline/orb_1.dtl",
+"orb_2": "res://assets/dialogic/timeline/orb_2.dtl",
+"orb_3": "res://assets/dialogic/timeline/orb_3.dtl",
+"orb_4": "res://assets/dialogic/timeline/orb_4.dtl",
+"orb_5": "res://assets/dialogic/timeline/orb_5.dtl",
+"orb_6": "res://assets/dialogic/timeline/orb_6.dtl",
+"orb_7": "res://assets/dialogic/timeline/orb_7.dtl",
+"weak": "res://assets/dialogic/timeline/weak.dtl"
+}
+layout/style_directory={
+"": "res://assets/dialogic/default_style.tres",
+"default_style": "res://assets/dialogic/default_style.tres"
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.05
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={
+".": 0.1
+}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+glossary/default_case_sensitive=true
+layout/style_list=["res://assets/dialogic/default_style.tres"]
+layout/default_style="res://assets/dialogic/default_style.tres"
+text/autoadvance_enabled=true
+variables={}
+text/absolute_autopauses=false
 
 [display]
 
@@ -27,7 +90,7 @@ window/size/mode=3
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
 [input]
 
@@ -90,6 +153,16 @@ rmb={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":2,"position":Vector2(156, 14),"global_position":Vector2(165, 62),"factor":1.0,"button_index":2,"canceled":false,"pressed":true,"double_click":false,"script":null)
 ]
 }
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+dialgi={
+"deadzone": 0.2,
+"events": []
+}
 
 [physics]
 
@@ -100,6 +173,8 @@ rmb={
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 anti_aliasing/quality/msaa_3d=2
+anti_aliasing/quality/screen_space_aa=1
+anti_aliasing/quality/use_taa=true
 
 [shader_globals]
 

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dwo0x5l3g3yrk"]
+
+[ext_resource type="Script" uid="uid://dpctanc0icqmp" path="res://assets/scripts/orb.gd" id="1_i4o1e"]
+[ext_resource type="Texture2D" uid="uid://noem0pr28bgo" path="res://assets/images/orb_texture.png" id="1_io2i5"]
+[ext_resource type="AudioStream" uid="uid://ceoefyp4euvoe" path="res://assets/sounds/dragon-studio-distant-bang-472364.mp3" id="3_qv773"]
+[ext_resource type="AudioStream" uid="uid://bvqwjq0u8uiau" path="res://assets/sounds/tithuh-powerup-success-523645.mp3" id="5_inisr"]
+
+[sub_resource type="Animation" id="Animation_n6osd"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_w3lto"]
+resource_name = "bounce"
+loop_mode = 2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_inisr"]
+_data = {
+&"RESET": SubResource("Animation_n6osd"),
+&"bounce": SubResource("Animation_w3lto")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4o1e"]
+albedo_texture = ExtResource("1_io2i5")
+uv1_scale = Vector3(-3.015, -2.005, -3.015)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_qv773"]
+material = SubResource("StandardMaterial3D_i4o1e")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qv773"]
+radius = 1.0
+
+[node name="Orb" type="RigidBody3D" unique_id=327153943]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_i4o1e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1424406173]
+libraries/ = SubResource("AnimationLibrary_inisr")
+autoplay = &"bounce"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=445601109]
+transform = Transform3D(0.7071067, -0.7071067, 0, 0.4999999, 0.4999999, -0.7071067, 0.4999999, 0.4999999, 0.7071067, 0, 1.2700738, 0)
+mesh = SubResource("BoxMesh_qv773")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1639291931]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 1, 0)
+shape = SubResource("SphereShape3D_qv773")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=8677614]
+transform = Transform3D(3.333333, 0, 0, 0, 3.333333, 0, 0, 0, 3.333333, 0, 0, 0)
+stream = ExtResource("3_qv773")
+volume_db = -30.0
+pitch_scale = 2.0
+
+[node name="Area" type="Area3D" parent="." unique_id=1498862189]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area" unique_id=98835724]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 1, 0)
+shape = SubResource("SphereShape3D_qv773")
+
+[node name="collect" type="AudioStreamPlayer3D" parent="." unique_id=1153175455]
+stream = ExtResource("5_inisr")
+
+[connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]

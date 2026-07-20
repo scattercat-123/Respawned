@@ -1,0 +1,7 @@
+man: Uhh.. I am not feeling well..
+man: Where... am I?
+man: I can't remember anything. Not my name, not how I got here, nothing. It's like someone ripped whole pieces out of my mind and left only scraps behind. But there's something familiar about this place... Like I've stood here before. If my memories are really gone, then why does it feel like something is waiting for me out there?
+[wait time="3.0"]
+[signal arg="drop_orbs"]
+man: What was that? I just saw something far in the distance???
+[signal arg="orb_achievement"]

@@ -1,5 +1,5 @@
 extends CharacterBody3D
-@onready var mesh: Node3D = $AuxScene4
+@onready var mesh: Node3D = $AuxScene5
 @onready var camera_spring_arm: SpringArm3D = $"../Camera/SpringArm3D"
 @onready var camera: Camera3D = $"../Camera/SpringArm3D/Camera3D"
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -20,6 +20,8 @@ var last_hand_punch = "right"
 var last_leg_kick = "right"
 var jump_force = 3
 var is_jumping = false
+var last_collected_orb = 0
+var cutscene_mode = false
 
 func _ready() -> void:
 	if Global.debug_mode == true:
@@ -37,7 +39,6 @@ func _physics_process(delta: float) -> void:
 		await get_tree().create_timer(0.6).timeout
 		sounds("land")
 		is_jumping = false
-		debug_label.text="landed"
 		current_anim = ""
 		
 	$"../Camera".global_position = lerp($"../Camera".global_position, global_position, 0.5)
@@ -63,10 +64,33 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
+	debug_label.text = str(Global.orbs_collected)
 	movement()
 	sounds("process")
+	combat()
+			
+	if Global.orbs_collected != last_collected_orb:
+		last_collected_orb = Global.orbs_collected
+		text_msg("System log #00" + str(Global.orbs_collected), Color(0.525, 0.0, 0.0, 1.0), 60, 2)
+		await get_tree().create_timer(0.4).timeout
+		text_msg("Memory_restor_percent = " + str(snapped((Global.orbs_collected*10 + randf_range(0.0, 5.0)), 0.01)), Color(0.599, 0.411, 0.0, 1.0), 50, 2)
 	
+	if Global.orbs_collected == 9 and not Global.find_10th_orb:
+		await get_tree().create_timer(5).timeout
+		Global.find_10th_orb = true
+		await get_tree().create_timer(10).timeout
+		Dialogic.start_timeline("cannot_find_10th_orb")
+		await get_tree().create_timer(3).timeout
+		cutscene_mode = true
+		animation_player.play("combat-weak")
+		Dialogic.start_timeline("weak")
+		await get_tree().create_timer(2.5).timeout
+		Global.ill = true
+
+func combat():
+	if cutscene_mode == true:
+		return
 	if Input.is_action_just_pressed("c") and (animation_player.current_animation != "combat-punch-idle1" and animation_player.current_animation != "combat-punch-idle2"):
 		combat_mode = true
 		velocity.x = 0
@@ -179,9 +203,10 @@ func sounds(sound : String):
 			running.volume_db = lerpf(running.volume_db, target_db, 0.05)
 		else:
 			running.volume_db = lerpf(running.volume_db, -80, 0.1)
-	
 
 func movement():
+	if cutscene_mode == true:
+		return
 	if combat_mode == false and is_jumping == false:
 		if Input.is_action_pressed("w") and Input.is_action_pressed("a"):
 			play_anim("combat-run-front")
@@ -218,7 +243,7 @@ func movement():
 		else:
 			if attacking==false:
 				play_anim("combat-idle")
-			
+
 func text_msg(txt : String, color : Color, size : int, speed : float):
 	var label = Label.new()
 	add_child(label)

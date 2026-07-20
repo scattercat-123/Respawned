@@ -718,3 +718,4 @@ frame_progress = 0.1833242
 [editable path="World/World/Character"]
 [editable path="World/World/Settings"]
 [editable path="World/World/Camera"]
+[editable path="World/World/UI"]
