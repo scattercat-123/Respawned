@@ -469,5 +469,5 @@ shape = SubResource("RectangleShape2D_ju63t")
 
 [connection signal="mouse_entered" from="developer note/XButton/Area2D" to="developer note" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="developer note/XButton/Area2D" to="developer note" method="_on_area_2d_mouse_exited"]
-[connection signal="area_entered" from="developer note/ResumeButton/Area2D" to="developer note" method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="developer note/ResumeButton/Area2D" to="developer note" method="_on_area_2d_area_exited"]
+[connection signal="mouse_entered" from="developer note/ResumeButton/Area2D" to="developer note" method="_on_area_2d_mouse_entered_1"]
+[connection signal="mouse_exited" from="developer note/ResumeButton/Area2D" to="developer note" method="_on_area_2d_mouse_exited_2"]

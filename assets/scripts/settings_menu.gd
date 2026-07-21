@@ -5,6 +5,7 @@ extends Control
 @onready var return_to_menu = [$ReturnToMenu1, $ReturnToMenu2]
 @onready var settings_menu = [$Settings1, $Settings2]
 
+var quit_hover = false
 var settings_hover = false
 var return_to_menu_hover = false
 var last_mouse_state := false
@@ -17,6 +18,8 @@ func _process(_delta: float) -> void:
 	if back_hover and Input.is_action_just_pressed("lmb") and animation_player.current_animation != "Settings Open":
 		animation_player.play_backwards("Settings Open")
 		Global.settings_menu_open = false
+	if quit_hover and Input.is_action_just_pressed("lmb") and animation_player.current_animation != "Settings Open":
+		get_tree().quit()
 		
 func button_hover(buttons : Array):
 	buttons[0].visible = false
@@ -63,3 +66,11 @@ func _on_back_button_mouse_entered() -> void:
 func _on_back_button_mouse_exited() -> void:
 	$"../Back".position.y -= 10
 	back_hover = false
+
+
+func _on_quit_area_mouse_entered() -> void:
+	quit_hover =true
+
+
+func _on_quit_area_mouse_exited() -> void:
+	quit_hover = false

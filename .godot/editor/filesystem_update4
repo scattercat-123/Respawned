@@ -12,3 +12,5 @@ res://assets/dialogic/timeline/2_pressed.dtl
 res://assets/scenes/chatacter.tscn
 res://assets/scripts/Global.gd
 res://assets/scripts/developer_note.gd
+res://assets/scripts/settings_menu.gd
+res://assets/scenes/esc_settings.tscn

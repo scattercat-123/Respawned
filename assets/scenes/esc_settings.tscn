@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://be1tg1pgajf7m" path="res://assets/images/settings-2.png" id="4_r0ylg"]
 [ext_resource type="Texture2D" uid="uid://cvc5j7wvg54x7" path="res://assets/images/settings-1.png" id="5_5gw76"]
 [ext_resource type="Texture2D" uid="uid://bapc6bsdn5cg6" path="res://assets/images/back.png" id="7_5gw76"]
+[ext_resource type="Texture2D" uid="uid://yfcu40duknii" path="res://assets/images/x-button.png" id="7_aswe3"]
 [ext_resource type="FontFile" uid="uid://c6k0x810ou3mq" path="res://assets/fonts/Recoleta-RegularDEMO.otf" id="8_hm71h"]
 [ext_resource type="Script" uid="uid://crhxfwitt81er" path="res://assets/scripts/fov_slider.gd" id="8_wqpvw"]
 
@@ -95,6 +96,18 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Buttons/Quit_area:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(121, -16)]
 }
 
 [sub_resource type="Animation" id="Animation_hm71h"]
@@ -186,6 +199,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0, -1080), Vector2(0, 0)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Buttons/Quit_area:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(121, -16), Vector2(2055.865, 210)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gw76"]
 _data = {
@@ -196,6 +221,9 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31y0k"]
 size = Vector2(409, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ukwd"]
+size = Vector2(123, 110)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hm71h"]
 radius = 100.0
@@ -258,6 +286,27 @@ max_polyphony = 6
 position = Vector2(211, 430)
 shape = SubResource("RectangleShape2D_31y0k")
 
+[node name="Quit_area" type="Area2D" parent="Buttons" unique_id=1140873721]
+position = Vector2(121, -16)
+
+[node name="XButton" type="Sprite2D" parent="Buttons/Quit_area" unique_id=1684884855]
+position = Vector2(-280, -64)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_aswe3")
+
+[node name="Label" type="Label" parent="Buttons/Quit_area" unique_id=1824182735]
+offset_left = -596.0
+offset_top = -96.0
+offset_right = -336.0
+offset_bottom = -27.0
+theme_override_fonts/font = ExtResource("8_hm71h")
+theme_override_font_sizes/font_size = 50
+text = "Quit Game"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Quit_area" unique_id=1583164671]
+position = Vector2(-280.5, -62)
+shape = SubResource("RectangleShape2D_4ukwd")
+
 [node name="Back" type="Node2D" parent="." unique_id=1523483406]
 position = Vector2(-306, 0)
 
@@ -307,5 +356,7 @@ text = "FOV"
 [connection signal="mouse_exited" from="Buttons/Return to Menu" to="Buttons" method="_on_return_to_menu_mouse_exited"]
 [connection signal="mouse_entered" from="Buttons/Settings" to="Buttons" method="_on_settings_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Settings" to="Buttons" method="_on_settings_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Quit_area" to="Buttons" method="_on_quit_area_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Quit_area" to="Buttons" method="_on_quit_area_mouse_exited"]
 [connection signal="mouse_entered" from="Back/BackButton" to="Buttons" method="_on_back_button_mouse_entered"]
 [connection signal="mouse_exited" from="Back/BackButton" to="Buttons" method="_on_back_button_mouse_exited"]

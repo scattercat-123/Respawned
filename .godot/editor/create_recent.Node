@@ -1,9 +1,9 @@
 CollisionShape2D
-Area2D
 CollisionShape3D
+Label
+Area2D
 Area3D
 AnimationPlayer
-Label
 ColorRect
 Node2D
 AnimatedSprite2D

@@ -5,7 +5,7 @@ var hover_x_button = false
 var hover_resume_button = false
 
 func _process(delta: float) -> void:
-	if hover_resume_button == true and Input.is_action_just_pressed("lmb"):
+	if hover_resume_button== true and Input.is_action_just_pressed("lmb"):
 		get_tree().quit()
 	if hover_x_button == true and Input.is_action_just_pressed("lmb") and not animation_player.is_playing():
 		animation_player.play_backwards("developers_note_in")
@@ -17,8 +17,8 @@ func _on_area_2d_mouse_entered() -> void:
 func _on_area_2d_mouse_exited() -> void:
 	hover_x_button = false
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
+func _on_area_2d_mouse_entered_1() -> void:
 	hover_resume_button = true
 
-func _on_area_2d_area_exited(area: Area2D) -> void:
+func _on_area_2d_mouse_exited_2() -> void:
 	hover_resume_button = false
